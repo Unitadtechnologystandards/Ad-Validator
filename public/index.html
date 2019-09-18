@@ -1,0 +1,304 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OVK AdValidator</title>
+    <!-- BASE -->
+    <link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+<div class="grid-container">
+    <div class="grid-x grid-padding-x">
+        <div class="large-12 cell">
+
+            <h3>OVK AdValidator <span class="spinner" style="display:none"></span></h3>
+
+            <div class="callout" id="settings">
+
+                <h5><em class="fa fa-gears"></em> Parameter</h5>
+<!--                <p>It has an easy to override visual style, and is appropriately subdued.</p>-->
+
+                <form onsubmit="return false;">
+
+                    <label>Werbeformat
+                        <select id="formats" required="required">
+                        </select>
+                    </label>
+
+                    <div class="grid-container" id="customSpecs" style="display:none">
+                        <div class="grid-x grid-padding-x">
+                            <div class="cell large-3">
+                                <label>Max K-Weight Initial</label>
+                                <input min="1" max="1000" id="customInit" type="number" value="100">
+                            </div>
+                            <div class="cell large-3">
+                                <label>Max K-Weight Subload</label>
+                                <input min="1" max="1000" id="customSub" type="number" value="100">
+                            </div>
+                            <div class="cell large-3">
+                                <label>Breite</label>
+                                <input min="1" max="2000" id="customWidth" type="number" value="640">
+                            </div>
+                            <div class="cell large-3">
+                                <label>Höhe</label>
+                                <input min="1" max="2000" id="customHeight" type="number" value="480">
+                            </div>
+                        </div>
+                    </div>
+
+                    <label>Zip-Archiv hochladen</label>
+
+                    <div class="grid-x grid-margin-x">
+                        <div class="cell large-2">
+                            <label for="archive" class="button">
+                                <i class="fa fa-file-zip-o"></i> Datei Auswahl
+                                <input type="file" id="archive" class="show-for-sr">
+                            </label>
+                        </div>
+                        <div class="cell large-10">
+                            <label>
+                                <input id="archiveName" type="text" readonly disabled/>
+                            </label>
+                        </div>
+                    </div>
+
+                    <label>(oder) Werbemittel
+                        <textarea spellcheck="false" id="source" style="height:100px" placeholder="&lt;HTML&gt;"></textarea>
+                    </label>
+
+                    <div id="assets">
+                        <label for="assets-first">Weitere Assets (Iframes, Skripten, CSS oder Bilder)</label>
+                        <div class="input-group">
+                            <input
+                                id="assets-first"
+                                class="input-group-field"
+                                type="url"
+                                maxlength="1024"
+                                placeholder=".js, .html, .css, .jpg, ..."
+                            >
+                            <div class="input-group-button">
+                                <button id="add-asset" type="button" class="info button">+</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <br />
+
+                    <div class="grid-x grid-padding-x">
+                        <div class="large-2 cell">
+                                <select id="iframeMode" >
+                                    <option value="friendly">Friendly</option>
+                                    <option value="unfriendly">Unfriendly</option>
+                                </select>
+                        </div>
+                        <div class="large-2 cell">
+                                <select id="iabMode">
+                                    <option value="500">IAB-Signal 500ms</option>
+                                    <option value="100">IAB-Signal 100ms</option>
+                                    <option value="0">kein IAB-Signal</option>
+                                </select>
+                        </div>
+                        <div class="large-8 cell text-right">
+                            <button id="check" type="button" class="primary button">
+                                <i class="fa fa-check"></i>
+                                Prüfvorgang ausführen
+                            </button>
+                            <a id="pdf" href="/pdf.php" target="_blank" disabled class="primary button">
+                                <i class="fa fa-file-pdf-o"></i>
+                                PDF herunterladen
+                            </a>
+                            <button id="flush" type="button" class="warning button">
+                                <i class="fa fa-times"></i>
+                                Zurücksetzen
+                            </button>
+                        </div>
+
+                    </div>
+
+                </form>
+
+            </div>
+
+            <!-- -------------------------- -->
+
+            <div id="results" style="display:none">
+
+                <div class="callout">
+                    <h5><em class="fa fa-check"></em> Ergebnis</h5>
+                    <table class="hover">
+                        <tbody>
+                        <tr>
+                            <th width="10" class="text-left">Werbeformat</th>
+                            <td><span id="specsFormat"></span></td>
+                        </tr>
+                        <tr>
+                            <th width="10" class="text-left">Initial/Subload</th>
+                            <td><span id="specsSizes"></span></td>
+                        </tr>
+                        <tr>
+                            <th width="10" class="text-left">Dimensionen</th>
+                            <td><span id="specsDim"></span></td>
+                        </tr>
+                        <tr>
+                            <th width="10" class="text-left">Subjekt</th>
+                            <td><span id="specsInput"></span></td>
+                        </tr>
+                        <tr>
+                            <th width="10" class="text-left">Erstellt</th>
+                            <td><span id="created"></span></td>
+                        </tr>
+                        <tr>
+                            <th width="10" class="text-left">Status</th>
+                            <td id="status">
+
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="callout">
+                    <h5><em class="fa fa-file-o"></em> Diagramme</h5>
+<!--                    <p>It has an easy to override visual style, and is appropriately subdued.</p>-->
+
+                    <div class="grid-container">
+                        <div class="grid-x grid-padding-x">
+
+                            <div class="large-4 cell">
+                                <h6>Initial K-Weight</h6>
+                                <div id="initialChart">
+                                </div>
+                                <div>
+                                    <span class="pull-right">
+                                        <span id="initialChartMax">0K</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                    </span>
+                                    <span>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                        <span id="initialChartVal">250K</span>
+                                    </span>
+                                </div>
+                                <br />
+                            </div>
+                            <div class="large-4 cell">
+                                <h6>Subload K-Weight</h6>
+                                <div id="subloadChart">
+                                </div>
+                                <div>
+                                    <span class="pull-right">
+                                        <span id="subloadChartMax">0K</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                    </span>
+                                    <span>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                        <span id="subloadChartVal">250K</span>
+                                    </span>
+                                </div>
+                                <br />
+                            </div>
+                            <div class="large-4 cell">
+                                <h6>Anfragen</h6>
+                                <div id="requestsChart">
+                                </div>
+                                <div>
+                                    <span class="pull-right">
+                                        <span id="requestsChartMax">0</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                    </span>
+                                    <span>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                        <span id="requestsChartVal">20</span>
+                                    </span>
+                                </div>
+                                <br />
+                            </div>
+
+                            <div class="large-6 cell">
+                                <h6>Größe/Typ</h6>
+                                <div id="byTypeSizeChart">
+                                </div>
+                            </div>
+                            <div class="large-6 cell">
+                                <h6>Anfragen/Typ</h6>
+                                <div id="byTypeRequestsChart">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="callout">
+                    <h5><em class="fa fa-bar-chart-o"></em> Anfragen</h5>
+<!--                    <p>It has an easy to override visual style, and is appropriately subdued.</p>-->
+
+                    <table class="hover">
+                        <thead>
+                        <tr>
+                            <th width="1"></th>
+                            <th>URL</th>
+                            <th width="1">Sub</th>
+                            <th width="1"><i class="fa fa-exclamation-triangle"></i></th>
+                            <th width="1">Typ</th>
+                            <th width="1">Dauer (ms)</th>
+                            <th width="1">Größe (k)</th>
+                            <th width="1">Http</th>
+                        </tr>
+                        </thead>
+                        <tbody id="resultRows">
+
+                        </tbody>
+                    </table>
+
+                </div>
+
+                <div class="callout">
+                    <h5><em class="fa fa-clock-o"></em> Profiling</h5>
+<!--                    <p>It has an easy to override visual style, and is appropriately subdued.</p>-->
+
+                    <div id="loadingTimes">
+                    </div>
+
+                </div>
+
+                <div class="callout">
+                    <h5><em class="fa fa-image"></em> Werbemittel</h5>
+                    <iframe
+                        id="preview"
+                        style="border: none; width: 1920px; height: 1200px;"
+                        src="about:blank"
+                    ></iframe>
+                </div>
+
+            </div>
+
+            <p>
+                Version 1.0.0
+            </p>
+
+        </div>
+    </div>
+</div>
+
+<script src="js/vendors.js"></script>
+<script src="js/app.js"></script>
+
+<script>
+
+    /* PDF-DATA */
+
+    if (window.ovkadcheckPdfData) {
+        $('#settings').hide();
+        $('#results').show();
+        App.results(window.ovkadcheckPdfData, true);
+    }
+    else {
+        App.handlers();
+        App.callApi(null, true);
+// App.callApi({'action': 'flush'}, true);
+    }
+
+</script>
+
+<!--<script src="/delayReady1000ms.php"></script>-->
+
+</body>
+</html>

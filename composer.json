@@ -1,0 +1,19 @@
+{
+  "name": "ovk/ad-checker",
+  "type": "project",
+  "require": {
+    "php": ">=7.2",
+    "ext-json" : "*"
+  },
+  "require-dev": {
+
+  },
+  "autoload": {
+    "psr-4": {
+      "OVKAC\\": ["src/"]
+    }
+  },
+  "scripts": {
+
+  }
+}

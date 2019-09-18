@@ -1,0 +1,29 @@
+html {
+  overflow-y: scroll;
+  -webkit-print-color-adjust: exact;
+}
+
+@page {
+  //margin: 30mm 45mm 30mm 45mm;
+  //padding: 0;
+  //margin: 0;
+  //size: 29.7cm 21cm;
+  //size: 21cm 29.7cm;
+}
+
+.spinner {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  border: 2px solid rgba(0,0,0,.3);
+  border-radius: 50%;
+  border-top-color: #000;
+  animation: spin 1s ease-in-out infinite;
+  -webkit-animation: spin 1s ease-in-out infinite;
+}
+@keyframes spin {
+  to { -webkit-transform: rotate(360deg); }
+}
+@-webkit-keyframes spin {
+  to { -webkit-transform: rotate(360deg); }
+}

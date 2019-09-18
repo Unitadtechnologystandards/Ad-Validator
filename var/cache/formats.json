@@ -1,0 +1,122 @@
+{
+  "formats": {
+    "900": {
+      "description": "2:1",
+      "initialLoad": 250,
+      "subLoad": 500,
+      "width": 1920,
+      "height": 1200
+    },
+    "901": {
+      "description": "4:1",
+      "initialLoad": 250,
+      "subLoad": 500,
+      "width": 1920,
+      "height": 1200
+    },
+    "902": {
+      "description": "6:1",
+      "initialLoad": 100,
+      "subLoad": 200,
+      "width": 1920,
+      "height": 1200
+    },
+    "903": {
+      "description": "8:1",
+      "initialLoad": 150,
+      "subLoad": 300,
+      "width": 1920,
+      "height": 1200
+    },
+    "904": {
+      "description": "10:1",
+      "initialLoad": 200,
+      "subLoad": 400,
+      "width": 1920,
+      "height": 1200
+    },
+    "910": {
+      "description": "1:2",
+      "initialLoad": 200,
+      "subLoad": 400,
+      "width": 1920,
+      "height": 1200
+    },
+    "911": {
+      "description": "1:3",
+      "initialLoad": 250,
+      "subLoad": 500,
+      "width": 1920,
+      "height": 1200
+    },
+    "912": {
+      "description": "1:4",
+      "initialLoad": 150,
+      "subLoad": 300,
+      "width": 640,
+      "height": 480
+    },
+    "920": {
+      "description": "1:1",
+      "initialLoad": 150,
+      "subLoad": 300,
+      "width": 1920,
+      "height": 1200
+    },
+    "801": {
+      "description": "Billboard Ad",
+      "initialLoad": 150,
+      "subLoad": 300,
+      "width": 800,
+      "height": 250
+    },
+    "271": {
+      "description": "Fullbanner",
+      "initialLoad": 100,
+      "subLoad": 200,
+      "width": 468,
+      "height": 60
+    },
+    "690": {
+      "description": "Halfpage Ad",
+      "initialLoad": 150,
+      "subLoad": 300,
+      "width": 300,
+      "height": 600
+    },
+    "695": {
+      "description": "Maxi Ad",
+      "initialLoad": 640,
+      "subLoad": 480
+    },
+    "307": {
+      "description": "Medium Rectangle",
+      "initialLoad": 100,
+      "subLoad": 200,
+      "width": 300,
+      "height": 250
+    },
+    "804": {
+      "description": "Sitebar",
+      "initialLoad": 200,
+      "subLoad": 400,
+      "width": 1920,
+      "height": 1200
+    },
+    "362": {
+      "description": "Skyscraper",
+      "initialLoad": 100,
+      "subLoad": 200,
+      "width": 120,
+      "height": 600
+    },
+    "337": {
+      "description": "Wallpaper",
+      "initialLoad": 80,
+      "subLoad": 80,
+      "width": 1920,
+      "height": 1200
+    }
+  },
+  "version": "1.0.0"
+}
