@@ -38,8 +38,7 @@ var App = {
             App.callApi({'source': $(this).val()});
         }).on('keyup', function () {
             App.checkReady();
-        })
-        ;
+        });
 
         // Upload archive
         $('#archive').on('click', function(e){
