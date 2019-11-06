@@ -11,7 +11,7 @@ use OVKAC\Logger\SysLogger;
 require_once __DIR__.'/../../vendor/autoload.php';
 
 $logger = new SysLogger(
-    __DIR__.'/../../var/log/dev.log',
+    __DIR__.'/../../var/log/app.log',
     substr(md5(microtime()), 0, 8)
 );
 
