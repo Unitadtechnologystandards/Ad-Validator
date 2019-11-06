@@ -90,7 +90,7 @@ final class DefaultPdf implements Pdf
             // -----
 
             $command = sprintf(
-                'timeout 30 %s --no-sandbox --virtual-time-budget=10000 --headless --disable-gpu --run-all-compositor-stages-before-draw --print-to-pdf="%s" %s/workdir/%s/ovkadcheckPdf.html',
+                'timeout 30 %s --no-sandbox --virtual-time-budget=10000 --headless --disable-gpu --run-all-compositor-stages-before-draw --print-to-pdf="%s" %s/workdir/%s/ovkAdValidator.html',
                 $this->chromiumBinary,
                 $outFile,
                 $this->host, // TODO

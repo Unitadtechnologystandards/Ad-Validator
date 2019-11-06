@@ -29,7 +29,7 @@ final class DefaultAdTemplate implements AdTemplate
 
     public function create(): void
     {
-        $this->logger->debug('Create ovkadcheck.html');
+        $this->logger->debug('Create ovkAdValidator.html');
 
         $workDir = $this->state->data()->parameters()->workDir();
 
