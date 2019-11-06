@@ -89,7 +89,7 @@ https://ovk-advalidator.de
 
 und dazugehörig
 
-https://unfriendly-ovk-advalidator.de
+https://unfriendly.ovk-advalidator.de
 
 
 

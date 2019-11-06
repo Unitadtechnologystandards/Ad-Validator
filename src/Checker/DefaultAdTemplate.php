@@ -126,7 +126,7 @@ final class DefaultAdTemplate implements AdTemplate
 
         if ($params->iframeMode() === 'unfriendly') {
             $host = sprintf(
-                '%s://unfriendly-%s',
+                '%s://unfriendly.%s',
                 parse_url($host, PHP_URL_SCHEME),
                 parse_url($host, PHP_URL_HOST)
             );
