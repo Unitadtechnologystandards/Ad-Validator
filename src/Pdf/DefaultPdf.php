@@ -54,6 +54,7 @@ final class DefaultPdf implements Pdf
                 '%s/ovkAdValidator.pdf',
                 $absWorkDir
             );
+            unlink($outFile);
 
             $this->logger->debug(
                 sprintf(

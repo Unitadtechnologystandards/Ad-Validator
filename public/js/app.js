@@ -73,6 +73,11 @@ var App = {
             App.callApi({'iframeMode': $(this).val()});
         });
 
+        // TCF vendors url
+        $('#tcfVendors').on('change', function () {
+            App.callApi({'tcfVendors': $(this).val()});
+        });
+
         // Check Button
         $('#check').on('click', function () {
             if (App.updating === 0) {
@@ -197,6 +202,9 @@ var App = {
 
         // Iframe Mode
         $('#iframeMode').val(p.iframeMode);
+
+        // TCF vendors
+        $('#tcfVendors').val(p.tcfVendors);
     },
 
     callApi: function (data, update, results)
@@ -376,6 +384,8 @@ var App = {
 
         $('#status').html('');
 
+        App.tcfTable(results.profiling.tcfVendors);
+
         App.resultsTable(results.profiling);
 
         App.initialChart(results.profiling, results.format);
@@ -398,6 +408,39 @@ var App = {
         ;
     },
 
+    tcfTable: function (tcfData)
+    {
+        let $thead = $('#tcfHead');
+        let $tbody = $('#tcfBody');
+        $thead.empty();
+        $thead.append('<th></th>');
+
+        let l = 1;
+        $.each(tcfData.lists, function (k, v) {
+            $thead.append('<th title="Version: ' + v.version + '">' + (v.name == '*' ? 'Vermarkter' : v.name) + '</th>');
+            l++;
+        });
+
+        if ($.isEmptyObject(tcfData.vendors)) {
+            $tbody.html('<tr><td colspan="' + l + '">Keine</td></tr>');
+        }
+        else {
+            $tbody.empty();
+            $.each(tcfData.vendors, function (k1, v1) {
+                let m = '';
+                $.each(tcfData.lists, function (k2, v2) {
+                    if (v1.matches.indexOf(v2.name) < 0) {
+                        m += '<td><span class="label alert">nein</span></td>';
+                    }
+                    else {
+                        m += '<td><span class="label success">ja</span></td>';
+                    }
+                });
+                $tbody.append('<tr><td title="ID: ' + k1 + '">' + v1.name + '</td>' + m + '</tr>');
+            });
+        }
+    },
+
     resultsTable: function (profiling)
     {
         let $tbody = $('#resultRows');
@@ -416,8 +459,8 @@ var App = {
             }
 
             let vendor = '';
-            if (v.vendor.length > 0) {
-                vendor = '<strong>' + v.vendor + '</strong><br />';
+            if (v.vendor) {
+                vendor = '<strong>' + v.vendor.name + '</strong><br />';
             }
 
             let errorText = '';

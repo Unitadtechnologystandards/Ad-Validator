@@ -11,23 +11,41 @@ final class DefaultVendors implements Vendors
     private $vendors;
     private $url;
     private $filePath;
-
-    private $ttl = 86400;
+    private $info;
+    private $name;
+    private $ttl;
 
     public function __construct(
         Logger $logger,
+        string $name,
         string $filePath,
-        string $url
+        string $url,
+        int $ttl = 86400,
+        bool $info = false
     )
     {
         $this->logger = $logger;
         $this->vendors = [];
 
         $this->url = $url;
+        $this->name = $name;
         $this->filePath = $filePath;
+
+        $this->ttl = $ttl;
+        $this->info = $info;
     }
 
-    public function find(string $url): string
+    public function name(): string
+    {
+        return $this->name;
+    }
+
+    public function version(): int
+    {
+        return (int)($this->vendors['vendorListVersion'] ?? -1);
+    }
+
+    public function find(string $url): ?array
     {
         $subject = strtolower(
             parse_url($url, PHP_URL_HOST).parse_url($url, PHP_URL_PATH)
@@ -35,22 +53,36 @@ final class DefaultVendors implements Vendors
         foreach ($this->vendors['vendors'] as $vendor) {
             foreach ($vendor['AdServers'] as $pattern) {
                 if (preg_match($pattern, $subject)) {
-                    return $vendor['name'];
+                    return [
+                        'id' => $vendor['id'],
+                        'name' => $vendor['name']
+                    ];
                 }
             }
         }
-        return '';
+        return null;
+    }
+
+    public function has(int $id): bool
+    {
+        foreach ($this->vendors['vendors'] as $vendor) {
+            if ((int)($vendor['id'] ?? -1) === $id) {
+                return true;
+            };
+        }
+        return false;
     }
 
     public function load(): Vendors
     {
-        $this->logger->debug('Load vendors');
+        $this->logger->debug('Load vendors: '.$this->name);
 
         if ( // re-fetch from remote
-            !is_readable($this->filePath)
+            $this->ttl === 0
+            || !is_readable($this->filePath)
             || filemtime($this->filePath) < time() - $this->ttl
         ) {
-            $this->logger->debug('Remote vendors');
+            $this->logger->debug('Remote vendors: '.$this->url);
 
             $vendors = @json_decode(
                 (string)file_get_contents($this->url),
@@ -72,11 +104,20 @@ final class DefaultVendors implements Vendors
                     'Invalid vendors json'
                 );
             }
-            $vendors = $this->sanitize($vendors);
-            file_put_contents(
-                $this->filePath,
-                json_encode($vendors, JSON_PRETTY_PRINT)
-            );
+
+            if ($this->info) {
+                $vendors = $this->parseInfo($vendors);
+            }
+
+            if ($this->ttl > 0) {
+                file_put_contents(
+                    $this->filePath,
+                    json_encode(
+                        $vendors,
+                        JSON_PRETTY_PRINT
+                    )
+                );
+            }
         }
         elseif (is_readable($this->filePath)) {
             $vendors = @json_decode(
@@ -98,10 +139,7 @@ final class DefaultVendors implements Vendors
             );
         }
 
-        if (
-            !is_array($vendors)
-            || !array_key_exists('vendors', $vendors)
-        ) {
+        if (!is_array($vendors)) {
             throw new \Exception(
                 'Invalid vendors json'
             );
@@ -112,8 +150,17 @@ final class DefaultVendors implements Vendors
         return $this;
     }
 
-    private function sanitize(array $vendors): array
+    private function parseInfo(array $vendors): array
     {
+        if (
+            !array_key_exists('vendors', $vendors)
+            || !is_array($vendors['vendors'])
+        ) {
+            throw new \Exception(
+                'Invalid vendors json'
+            );
+        }
+
         $sanitized = [];
         foreach ($vendors['vendors'] as $nr => $vendor) {
             if (

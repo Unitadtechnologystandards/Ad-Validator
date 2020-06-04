@@ -47,5 +47,9 @@ interface StateParameters extends \JsonSerializable
 
     public function setIframeMode(string $param): void;
 
+    public function setTcfVendors(string $url): void;
+
+    public function tcfVendors(): string;
+
     public function iframeMode(): string;
 }

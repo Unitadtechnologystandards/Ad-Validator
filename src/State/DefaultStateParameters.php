@@ -16,6 +16,7 @@ final class DefaultStateParameters implements StateParameters
     private $customHeight;
     private $iabMode;
     private $iframeMode;
+    private $tcfVendors;
 
     public function __construct()
     {
@@ -30,6 +31,7 @@ final class DefaultStateParameters implements StateParameters
         $this->workDir = '';
         $this->iabMode = 500;
         $this->iframeMode = 'friendly';
+        $this->tcfVendors = '';
     }
 
     public function format(): string
@@ -70,6 +72,11 @@ final class DefaultStateParameters implements StateParameters
     public function setIframeMode(string $value): void
     {
         $this->iframeMode = $value;
+    }
+
+    public function setTcfVendors(string $url): void
+    {
+        $this->tcfVendors = $url;
     }
 
     public function customInit(): int
@@ -142,6 +149,11 @@ final class DefaultStateParameters implements StateParameters
         return $this->iframeMode;
     }
 
+    public function tcfVendors(): string
+    {
+        return $this->tcfVendors;
+    }
+
     public function jsonSerialize()
     {
         return [
@@ -155,6 +167,7 @@ final class DefaultStateParameters implements StateParameters
             'assets' => $this->assets,
             'iabMode' => $this->iabMode,
             'iframeMode' => $this->iframeMode,
+            'tcfVendors' => $this->tcfVendors,
             'workDir' => $this->workDir,
         ];
     }

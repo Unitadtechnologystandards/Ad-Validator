@@ -1,6 +1,6 @@
 {
-    "vendorListVersion": 159,
-    "lastUpdated": "2019-08-01T16:10:07Z",
+    "vendorListVersion": 200,
+    "lastUpdated": "2020-04-30T16:10:08Z",
     "vendors": [
         {
             "id": 8,
@@ -33,7 +33,7 @@
             "id": 27,
             "name": "ADventori SAS",
             "AdServers": [
-                "#^[a-z0-9\\-]+\\.adventori\\.com.*#"
+                "#^[a-z0-9\\.\\-]+\\.adventori\\.com.*#"
             ]
         },
         {
@@ -204,7 +204,7 @@
                 "#^dcdn\\.adnxs\\.com.*#",
                 "#^vcdn\\.adnxs\\.com.*#",
                 "#^a248\\.e\\.akamai\\.net.*#",
-                "#^a248\\.e\\.akamai\\.net\/appnexus\\.download\\.akamai\\.com\/[a-z0-9\\-]+.*#",
+                "#^a248\\.e\\.akamai\\.net\/appnexus\\.download\\.akamai\\.com\/[a-z0-9\\.\\-]+.*#",
                 "#^ib\\.adnxs\\.com.*#",
                 "#^secure\\.adnxs\\.com.*#",
                 "#^m\\.adnxs\\.com.*#",
@@ -353,7 +353,7 @@
             "id": 79,
             "name": "MediaMath, Inc.",
             "AdServers": [
-                "#^[a-z0-9\\-]+\\.mathtag\\.com.*#",
+                "#^[a-z0-9\\.\\-]+\\.mathtag\\.com.*#",
                 "#^action\\.mathtag\\.com.*#",
                 "#^addthis\\.mathtag\\.com.*#",
                 "#^akamai\\.mathtag\\.com.*#",
@@ -602,8 +602,8 @@
             "id": 53,
             "name": "Sirdata",
             "AdServers": [
-                "#^[a-z0-9\\-]+\\.sddan\\.com.*#",
-                "#^[a-z0-9\\-]+\\.dataleaks\\.com.*#"
+                "#^[a-z0-9\\.\\-]+\\.sddan\\.com.*#",
+                "#^[a-z0-9\\.\\-]+\\.dataleaks\\.com.*#"
             ]
         },
         {
@@ -611,9 +611,9 @@
             "name": "Justpremium BV",
             "AdServers": [
                 "#^ads\\.justpremium\\.com.*#",
-                "#^[a-z0-9\\-]+\\.ads\\.justpremium\\.com.*#",
+                "#^[a-z0-9\\.\\-]+\\.ads\\.justpremium\\.com.*#",
                 "#^tracking\\.justpremium\\.com.*#",
-                "#^[a-z0-9\\-]+\\.tracking\\.justpremium\\.com.*#",
+                "#^[a-z0-9\\.\\-]+\\.tracking\\.justpremium\\.com.*#",
                 "#^cdn\\.justpremium\\.com.*#",
                 "#^creative\\.justpremium\\.com.*#"
             ]
@@ -623,7 +623,8 @@
             "name": "Vdopia DBA Chocolate Platform",
             "AdServers": [
                 "#^vdopia\\.com.*#"
-            ]
+            ],
+            "deletedDate": "2019-08-06T00:00:00Z"
         },
         {
             "id": 81,
@@ -638,6 +639,105 @@
             "AdServers": [
                 "#^turn\\.com.*#",
                 "#^amgdgt\\.com.*#"
+            ]
+        },
+        {
+            "id": 35,
+            "name": "Purch Group, Inc.",
+            "AdServers": [
+                "#^servebom\\.com.*#",
+                "#^ads\\.mediarithmics\\.com.*#",
+                "#^events\\.mediarithmics\\.com.*#"
+            ],
+            "deletedDate": "2019-05-30T00:00:00Z"
+        },
+        {
+            "id": 67,
+            "name": "LifeStreet Corporation",
+            "AdServers": [
+                "#^ads\\.lfstmedia\\.com.*#"
+            ],
+            "deletedDate": "2019-05-30T00:00:00Z"
+        },
+        {
+            "id": 3,
+            "name": "affilinet",
+            "AdServers": [
+                "#^webmasterplan\\.com.*#",
+                "#^successfultogether\\.co\\.uk.*#",
+                "#^reussissonsensemble\\.fr.*#",
+                "#^samenresultaat\\.nl.*#",
+                "#^epartner\\.es.*#"
+            ],
+            "deletedDate": "2019-06-21T00:00:00Z"
+        },
+        {
+            "id": 74,
+            "name": "Admotion SRL",
+            "AdServers": [
+                "#^ia\\.nspmotion\\.com.*#",
+                "#^akfs\\.nspmotion\\.com.*#",
+                "#^s-akfs\\.nspmotion\\.com.*#",
+                "#^akhtm\\.nspmotion\\.com.*#",
+                "#^s-akhtm\\.nspmotion\\.com.*#"
+            ],
+            "deletedDate": "2019-07-24T00:00:00Z"
+        },
+        {
+            "id": 191,
+            "name": "realzeit GmbH",
+            "AdServers": [
+                "#^dashboard-realzeitgmbh\\.netdna-ssl\\.com.*#",
+                "#^b\\.realzeit\\.io.*#",
+                "#^t-eu\\.realzeit\\.io.*#"
+            ],
+            "deletedDate": "2019-04-29T00:00:00Z"
+        },
+        {
+            "id": 197,
+            "name": "Switch Concepts Limited",
+            "AdServers": [
+                "#^ad\\.newsnow\\.net.*#",
+                "#^,ads-creativesyndicator\\.com.*#",
+                "#^,adstheaa\\.com.*#",
+                "#^,i-transactads\\.com.*#",
+                "#^switchadhub\\.com,switchads\\.com.*#",
+                "#^yieldoptimisers\\.net.*#",
+                "#^,zetabbs\\.com.*#"
+            ],
+            "deletedDate": "2019-07-26T00:00:00Z"
+        },
+        {
+            "id": 390,
+            "name": "Parsec Media Inc.",
+            "AdServers": [
+                "#^a47b\\.com.*#"
+            ],
+            "deletedDate": "2019-06-27T00:00:00Z"
+        },
+        {
+            "id": 459,
+            "name": "uppr GmbH",
+            "AdServers": [
+                "#^netzwerk\\.uppr\\.de.*#",
+                "#^netzwerk\\.energy-sales-network\\.de.*#"
+            ],
+            "deletedDate": "2019-06-17T00:00:00Z"
+        },
+        {
+            "id": 500,
+            "name": "Turbo",
+            "AdServers": [
+                "#^go\\.turboadv\\.com.*#"
+            ],
+            "deletedDate": "2019-07-12T00:00:00Z"
+        },
+        {
+            "id": 68,
+            "name": "Sizmek Technologies, Inc. ",
+            "AdServers": [
+                "#^serving-sys\\.com.*#",
+                "#^rfihub\\.net.*#"
             ]
         },
         {
@@ -679,7 +779,8 @@
                 "#^studio\\.lemonpi\\.io.*#",
                 "#^superadmin-test\\.lemonpi\\.io.*#",
                 "#^superadmin\\.lemonpi\\.io.*#"
-            ]
+            ],
+            "deletedDate": "2019-08-06T00:00:00Z"
         },
         {
             "id": 40,
@@ -819,7 +920,7 @@
             "id": 110,
             "name": "Hottraffic BV (DMA Institute)",
             "AdServers": [
-                "#^[a-z0-9\\-]+\\.cumulus-cloud\\.com.*#"
+                "#^[a-z0-9\\.\\-]+\\.cumulus-cloud\\.com.*#"
             ]
         },
         {
@@ -878,7 +979,7 @@
             "name": "SlimCut Media SAS",
             "AdServers": [
                 "#^freeskreen\\.com.*#",
-                "#^[a-z0-9\\-]+\\.freeskreen\\.com.*#",
+                "#^[a-z0-9\\.\\-]+\\.freeskreen\\.com.*#",
                 "#^slimcut\\.media.*#"
             ]
         },
@@ -887,11 +988,11 @@
             "name": "Rich Audience",
             "AdServers": [
                 "#^richaudience\\.com.*#",
-                "#^[a-z0-9\\-]+\\.richaudience\\.com.*#",
+                "#^[a-z0-9\\.\\-]+\\.richaudience\\.com.*#",
                 "#^richmediastudio\\.com.*#",
-                "#^[a-z0-9\\-]+\\.richmediastudio\\.com.*#",
+                "#^[a-z0-9\\.\\-]+\\.richmediastudio\\.com.*#",
                 "#^richmedia\\.studio.*#",
-                "#^[a-z0-9\\-]+\\.richmedia\\.studio.*#"
+                "#^[a-z0-9\\.\\-]+\\.richmedia\\.studio.*#"
             ]
         },
         {
@@ -900,8 +1001,7 @@
             "AdServers": [
                 "#^ws-cdn\\.com.*#",
                 "#^widespace\\.com.*#"
-            ],
-            "deletedDate": "2019-08-01T00:00:00Z"
+            ]
         },
         {
             "id": 122,
@@ -994,7 +1094,7 @@
             "id": 157,
             "name": "Seedtag Advertising S.L",
             "AdServers": [
-                "#^[a-z0-9\\-]+\\.seedtag\\.com.*#"
+                "#^[a-z0-9\\.\\-]+\\.seedtag\\.com.*#"
             ]
         },
         {
@@ -1113,7 +1213,7 @@
             "id": 90,
             "name": "Teroa S.A.",
             "AdServers": [
-                "#^[a-z0-9\\-]+\\.e-planning\\.net.*#"
+                "#^[a-z0-9\\.\\-]+\\.e-planning\\.net.*#"
             ]
         },
         {
@@ -1200,9 +1300,9 @@
             "id": 156,
             "name": "Centro, Inc.",
             "AdServers": [
-                "#^[a-z0-9\\-]+\\.centro\\.net.*#",
-                "#^[a-z0-9\\-]+\\.sitescout\\.com.*#",
-                "#^[a-z0-9\\-]+\\.basis\\.net.*#"
+                "#^[a-z0-9\\.\\-]+\\.centro\\.net.*#",
+                "#^[a-z0-9\\.\\-]+\\.sitescout\\.com.*#",
+                "#^[a-z0-9\\.\\-]+\\.basis\\.net.*#"
             ]
         },
         {
@@ -1253,9 +1353,9 @@
                 "#^sync\\.ligadx\\.com.*#",
                 "#^trk\\.helios\\.ligatus\\.com.*#",
                 "#^x\\.ligatus\\.com.*#",
-                "#^[a-z0-9\\-]+\\.ligatus\\.com.*#",
-                "#^[a-z0-9\\-]+\\.ligadx\\.com.*#",
-                "#^[a-z0-9\\-]+\\.helios\\.ligatus\\.com.*#",
+                "#^[a-z0-9\\.\\-]+\\.ligatus\\.com.*#",
+                "#^[a-z0-9\\.\\-]+\\.ligadx\\.com.*#",
+                "#^[a-z0-9\\.\\-]+\\.helios\\.ligatus\\.com.*#",
                 "#^d2\\.ligatus\\.com.*#",
                 "#^r\\.ligatus\\.com.*#",
                 "#^ms\\.ligatus\\.com.*#",
@@ -1274,7 +1374,7 @@
             "id": 205,
             "name": "Adssets AB",
             "AdServers": [
-                "#^[a-z0-9\\-]+\\.pliing\\.com.*#"
+                "#^[a-z0-9\\.\\-]+\\.pliing\\.com.*#"
             ]
         },
         {
@@ -1354,7 +1454,8 @@
             "name": "A Million Ads Limited",
             "AdServers": [
                 "#^amillionads\\.com.*#"
-            ]
+            ],
+            "deletedDate": "2019-08-06T00:00:00Z"
         },
         {
             "id": 192,
@@ -1377,7 +1478,7 @@
             "name": "ZBO Media",
             "AdServers": [
                 "#^zebestof\\.com.*#",
-                "#^[a-z0-9\\-]+\\.zebestof\\.com.*#"
+                "#^[a-z0-9\\.\\-]+\\.zebestof\\.com.*#"
             ]
         },
         {
@@ -1397,8 +1498,8 @@
             "id": 254,
             "name": "LiquidM Technology GmbH",
             "AdServers": [
-                "#^[a-z0-9\\-]+\\.liquidm\\.com.*#",
-                "#^[a-z0-9\\-]+\\.lqm\\.io.*#"
+                "#^[a-z0-9\\.\\-]+\\.liquidm\\.com.*#",
+                "#^[a-z0-9\\.\\-]+\\.lqm\\.io.*#"
             ]
         },
         {
@@ -1548,7 +1649,8 @@
                 "#^intowow\\.com.*#",
                 "#^intowow\\.net.*#",
                 "#^i2w\\.io.*#"
-            ]
+            ],
+            "deletedDate": "2019-08-12T00:00:00Z"
         },
         {
             "id": 279,
@@ -1565,7 +1667,8 @@
             "AdServers": [
                 "#^sn\\.sanoma\\.fi.*#",
                 "#^sat\\.sanoma\\.fi.*#"
-            ]
+            ],
+            "deletedDate": "2019-08-07T00:00:00Z"
         },
         {
             "id": 276,
@@ -1590,7 +1693,8 @@
             "name": "RockYou, Inc.",
             "AdServers": [
                 "#^rockyou\\.net.*#"
-            ]
+            ],
+            "deletedDate": "2019-08-09T00:00:00Z"
         },
         {
             "id": 237,
@@ -1711,7 +1815,7 @@
             "id": 299,
             "name": "AdClear GmbH",
             "AdServers": [
-                "#^[a-z0-9\\-]+\\.adclear\\.net.*#"
+                "#^[a-z0-9\\.\\-]+\\.adclear\\.net.*#"
             ]
         },
         {
@@ -1727,10 +1831,10 @@
             "id": 259,
             "name": "ADYOULIKE SA",
             "AdServers": [
-                "#^[a-z0-9\\-]+\\.omnitagjs\\.com.*#",
-                "#^[a-z0-9\\-]+\\.omnitagsb\\.com.*#",
-                "#^[a-z0-9\\-]+\\.adyoulike\\.com.*#",
-                "#^[a-z0-9\\-]+\\.ayl\\.io.*#"
+                "#^[a-z0-9\\.\\-]+\\.omnitagjs\\.com.*#",
+                "#^[a-z0-9\\.\\-]+\\.omnitagsb\\.com.*#",
+                "#^[a-z0-9\\.\\-]+\\.adyoulike\\.com.*#",
+                "#^[a-z0-9\\.\\-]+\\.ayl\\.io.*#"
             ]
         },
         {
@@ -1744,7 +1848,7 @@
             "id": 253,
             "name": "Improve Digital International BV",
             "AdServers": [
-                "#^[a-z0-9\\-]+\\.360yield\\.com.*#"
+                "#^[a-z0-9\\.\\-]+\\.360yield\\.com.*#"
             ]
         },
         {
@@ -1759,7 +1863,8 @@
             "name": "R-TARGET",
             "AdServers": [
                 "#^r-target\\.com.*#"
-            ]
+            ],
+            "deletedDate": "2019-08-26T00:00:00Z"
         },
         {
             "id": 291,
@@ -1767,9 +1872,10 @@
             "AdServers": [
                 "#^qwertize\\.com.*#",
                 "#^d-1\\.co.*#",
-                "#^[a-z0-9\\-]+\\.qwertize\\.com.*#",
+                "#^[a-z0-9\\.\\-]+\\.qwertize\\.com.*#",
                 "#^audiencerun\\.com.*#"
-            ]
+            ],
+            "deletedDate": "2019-08-26T00:00:00Z"
         },
         {
             "id": 295,
@@ -1803,7 +1909,7 @@
             "id": 47,
             "name": "ADMAN - Phaistos Networks, S.A.",
             "AdServers": [
-                "#^[a-z0-9\\-]+\\.adman\\.gr.*#",
+                "#^[a-z0-9\\.\\-]+\\.adman\\.gr.*#",
                 "#^adman\\.forthnet\\.gr.*#",
                 "#^adman\\.antenna\\.gr.*#",
                 "#^ads\\.naftemporiki\\.gr.*#"
@@ -1814,8 +1920,8 @@
             "name": "SMARTSTREAM.TV GmbH",
             "AdServers": [
                 "#^ads\\.smartstream\\.tv.*#",
-                "#^[a-z0-9\\-]+\\.smartstream\\.tv.*#",
-                "#^[a-z0-9\\-]+\\.adsafety\\.net.*#",
+                "#^[a-z0-9\\.\\-]+\\.smartstream\\.tv.*#",
+                "#^[a-z0-9\\.\\-]+\\.adsafety\\.net.*#",
                 "#^smartyield\\.smartstream\\.tv.*#"
             ]
         },
@@ -1959,8 +2065,8 @@
             "id": 302,
             "name": "Mobile Professionals BV",
             "AdServers": [
-                "#^[a-z0-9\\-]+\\.mobpro\\.com.*#",
-                "#^[a-z0-9\\-]+\\.mp01\\.net.*#"
+                "#^[a-z0-9\\.\\-]+\\.mobpro\\.com.*#",
+                "#^[a-z0-9\\.\\-]+\\.mp01\\.net.*#"
             ]
         },
         {
@@ -2013,21 +2119,21 @@
             "id": 139,
             "name": "Permodo GmbH",
             "AdServers": [
-                "#^[a-z0-9\\-]+\\.permodo\\.com.*#",
-                "#^[a-z0-9\\-]+\\.permodo\\.net.*#",
-                "#^[a-z0-9\\-]+\\.adsafety\\.net.*#"
+                "#^[a-z0-9\\.\\-]+\\.permodo\\.com.*#",
+                "#^[a-z0-9\\.\\-]+\\.permodo\\.net.*#",
+                "#^[a-z0-9\\.\\-]+\\.adsafety\\.net.*#"
             ]
         },
         {
             "id": 331,
             "name": "ad6media",
             "AdServers": [
-                "#^[a-z0-9\\-]+\\.ad6media\\.fr.*#",
-                "#^[a-z0-9\\-]+\\.s\\.ad6media\\.fr.*#",
-                "#^[a-z0-9\\-]+\\.ad6\\.fr.*#",
-                "#^[a-z0-9\\-]+\\.ad6media\\.es.*#",
-                "#^[a-z0-9\\-]+\\.sd1\\.fr.*#",
-                "#^[a-z0-9\\-]+\\.adsixmedia\\.fr.*#"
+                "#^[a-z0-9\\.\\-]+\\.ad6media\\.fr.*#",
+                "#^[a-z0-9\\.\\-]+\\.s\\.ad6media\\.fr.*#",
+                "#^[a-z0-9\\.\\-]+\\.ad6\\.fr.*#",
+                "#^[a-z0-9\\.\\-]+\\.ad6media\\.es.*#",
+                "#^[a-z0-9\\.\\-]+\\.sd1\\.fr.*#",
+                "#^[a-z0-9\\.\\-]+\\.adsixmedia\\.fr.*#"
             ]
         },
         {
@@ -2080,7 +2186,7 @@
             "name": "Gemius SA",
             "AdServers": [
                 "#^hit\\.gemius\\.pl.*#",
-                "#^[a-z0-9\\-]+\\.adocean\\.pl.*#"
+                "#^[a-z0-9\\.\\-]+\\.adocean\\.pl.*#"
             ]
         },
         {
@@ -2182,7 +2288,8 @@
             "AdServers": [
                 "#^bigabidserv\\.com.*#",
                 "#^highqualityserv\\.com.*#"
-            ]
+            ],
+            "deletedDate": "2019-08-26T00:00:00Z"
         },
         {
             "id": 351,
@@ -2213,13 +2320,13 @@
             "name": "Getintent USA, inc.",
             "AdServers": [
                 "#^cdn\\.adhigh\\.net.*#",
-                "#^f[a-z0-9\\-]+\\.adhigh\\.net.*#",
-                "#^ivid-[a-z0-9\\-]+\\.adhigh\\.net.*#",
+                "#^f[a-z0-9\\.\\-]+\\.adhigh\\.net.*#",
+                "#^ivid-[a-z0-9\\.\\-]+\\.adhigh\\.net.*#",
                 "#^px\\.adhigh\\.net.*#",
                 "#^us\\.adhigh\\.net.*#",
-                "#^vast-[a-z0-9\\-]+\\.adhigh\\.net.*#",
-                "#^vid-[a-z0-9\\-]+de\\.adhigh\\.net.*#",
-                "#^vid-[a-z0-9\\-]+us\\.adhigh\\.net.*#",
+                "#^vast-[a-z0-9\\.\\-]+\\.adhigh\\.net.*#",
+                "#^vid-[a-z0-9\\.\\-]+de\\.adhigh\\.net.*#",
+                "#^vid-[a-z0-9\\.\\-]+us\\.adhigh\\.net.*#",
                 "#^vid-cdn\\.adhigh\\.net.*#",
                 "#^vid-px\\.adhigh\\.net.*#"
             ]
@@ -2303,7 +2410,7 @@
             "name": "The Reach Group GmbH",
             "AdServers": [
                 "#^\"redintelligence\\.net.*#",
-                "#^hal9000[a-z0-9\\-]+\\.redintelligence\\.net\"\".*#",
+                "#^hal9000[a-z0-9\\.\\-]+\\.redintelligence\\.net\"\".*#",
                 "#^ad-server\\.eu.*#",
                 "#^cdn-network\\.medialead\\.eu\".*#",
                 "#^medialead\\.de.*#",
@@ -2396,8 +2503,8 @@
             "id": 415,
             "name": "Seenthis AB",
             "AdServers": [
-                "#^[a-z0-9\\-]+\\.seenthis\\.se.*#",
-                "#^[a-z0-9\\-]+\\.seenthis\\.co.*#"
+                "#^[a-z0-9\\.\\-]+\\.seenthis\\.se.*#",
+                "#^[a-z0-9\\.\\-]+\\.seenthis\\.co.*#"
             ]
         },
         {
@@ -2484,7 +2591,8 @@
             "name": "R-Advertising",
             "AdServers": [
                 "#^tradedoubler\\.com.*#"
-            ]
+            ],
+            "deletedDate": "2019-08-20T00:00:00Z"
         },
         {
             "id": 362,
@@ -2521,17 +2629,18 @@
             "name": "Ooyala Inc",
             "AdServers": [
                 "#^www\\.videoplaza\\.tv.*#"
-            ]
+            ],
+            "deletedDate": "2019-08-13T00:00:00Z"
         },
         {
             "id": 450,
             "name": "Neodata Group srl",
             "AdServers": [
-                "#^[a-z0-9\\-]+\\.neodatagroup\\.com.*#",
-                "#^[a-z0-9\\-]+\\.omg\\.neodatagroup\\.com.*#",
-                "#^[a-z0-9\\-]+\\.adtag\\.neodatagroup\\.com.*#",
-                "#^[a-z0-9\\-]+\\.smart-dmp\\.com.*#",
-                "#^[a-z0-9\\-]+\\.ucg\\.smart-dmp\\.com.*#"
+                "#^[a-z0-9\\.\\-]+\\.neodatagroup\\.com.*#",
+                "#^[a-z0-9\\.\\-]+\\.omg\\.neodatagroup\\.com.*#",
+                "#^[a-z0-9\\.\\-]+\\.adtag\\.neodatagroup\\.com.*#",
+                "#^[a-z0-9\\.\\-]+\\.smart-dmp\\.com.*#",
+                "#^[a-z0-9\\.\\-]+\\.ucg\\.smart-dmp\\.com.*#"
             ]
         },
         {
@@ -2595,7 +2704,8 @@
             "name": "ADRINO Sp. z o.o.",
             "AdServers": [
                 "#^vendimob\\.pl.*#"
-            ]
+            ],
+            "deletedDate": "2019-09-05T00:00:00Z"
         },
         {
             "id": 365,
@@ -2649,7 +2759,8 @@
             "name": "Ad Unity Ltd",
             "AdServers": [
                 "#^adunity\\.com.*#"
-            ]
+            ],
+            "deletedDate": "2019-08-13T00:00:00Z"
         },
         {
             "id": 346,
@@ -2705,7 +2816,7 @@
             "id": 474,
             "name": "hbfsTech",
             "AdServers": [
-                "#^[a-z0-9\\-]+\\.hbfstech\\.net.*#"
+                "#^[a-z0-9\\.\\-]+\\.hbfstech\\.net.*#"
             ]
         },
         {
@@ -2731,7 +2842,8 @@
                 "#^lib\\.selfcampaign\\.com.*#",
                 "#^track\\.selfcampaign\\.com.*#",
                 "#^track2\\.selfcampaign\\.com.*#"
-            ]
+            ],
+            "deletedDate": "2019-08-14T00:00:00Z"
         },
         {
             "id": 357,
@@ -2756,19 +2868,19 @@
             "name": "Madington",
             "AdServers": [
                 "#^delivered-by-madington\\.com.*#",
-                "#^[a-z0-9\\-]+\\.delivered-by-madington\\.com.*#",
+                "#^[a-z0-9\\.\\-]+\\.delivered-by-madington\\.com.*#",
                 "#^streamedby\\.com.*#",
-                "#^[a-z0-9\\-]+\\.streamedby\\.com.*#"
+                "#^[a-z0-9\\.\\-]+\\.streamedby\\.com.*#"
             ]
         },
         {
             "id": 458,
             "name": "AdColony, Inc.",
             "AdServers": [
-                "#^[a-z0-9\\-]+\\.adcolony\\.com.*#",
-                "#^[a-z0-9\\-]+\\.adtilt\\.com.*#",
-                "#^[a-z0-9\\-]+\\.adccache\\.cn.*#",
-                "#^[a-z0-9\\-]+\\.cloudfront\\.net.*#"
+                "#^[a-z0-9\\.\\-]+\\.adcolony\\.com.*#",
+                "#^[a-z0-9\\.\\-]+\\.adtilt\\.com.*#",
+                "#^[a-z0-9\\.\\-]+\\.adccache\\.cn.*#",
+                "#^[a-z0-9\\.\\-]+\\.cloudfront\\.net.*#"
             ]
         },
         {
@@ -2793,7 +2905,7 @@
             "id": 493,
             "name": "Clicksco Digital Limited",
             "AdServers": [
-                "#^[a-z0-9\\-]+\\.ccgateway\\.com.*#"
+                "#^[a-z0-9\\.\\-]+\\.ccgateway\\.com.*#"
             ]
         },
         {
@@ -2806,7 +2918,7 @@
         },
         {
             "id": 408,
-            "name": "FM Labs LLC",
+            "name": "Kubient",
             "AdServers": [
                 "#^x\\.fidelity-media\\.com.*#"
             ]
@@ -2815,22 +2927,22 @@
             "id": 467,
             "name": "Haensel AMS GmbH",
             "AdServers": [
-                "#^[a-z0-9\\-]+\\.h-ams\\.net.*#"
+                "#^[a-z0-9\\.\\-]+\\.h-ams\\.net.*#"
             ]
         },
         {
             "id": 488,
             "name": "Opinary GmbH",
             "AdServers": [
-                "#^[a-z0-9\\-]+\\.pressekompass\\.net.*#",
-                "#^[a-z0-9\\-]+\\.opinary\\.com.*#"
+                "#^[a-z0-9\\.\\-]+\\.pressekompass\\.net.*#",
+                "#^[a-z0-9\\.\\-]+\\.opinary\\.com.*#"
             ]
         },
         {
             "id": 490,
             "name": "PLAYGROUND XYZ EMEA LTD",
             "AdServers": [
-                "#^[a-z0-9\\-]+\\.playground\\.xyz.*#"
+                "#^[a-z0-9\\.\\-]+\\.playground\\.xyz.*#"
             ]
         },
         {
@@ -2854,24 +2966,24 @@
             "AdServers": [
                 "#^samplicio\\.us.*#",
                 "#^tracker\\.samplicio\\.us.*#",
-                "#^[a-z0-9\\-]+samplicio\\.us.*#"
+                "#^[a-z0-9\\.\\-]+samplicio\\.us.*#"
             ]
         },
         {
             "id": 471,
             "name": "FlexOffers.com, LLC",
             "AdServers": [
-                "#^[a-z0-9\\-]+\\.flexoffers\\.com.*#",
-                "#^[a-z0-9\\-]+\\.flexlinks\\.com.*#",
-                "#^[a-z0-9\\-]+\\.flexlinkspro\\.com.*#",
-                "#^[a-z0-9\\-]+\\.fxo\\.co.*#"
+                "#^[a-z0-9\\.\\-]+\\.flexoffers\\.com.*#",
+                "#^[a-z0-9\\.\\-]+\\.flexlinks\\.com.*#",
+                "#^[a-z0-9\\.\\-]+\\.flexlinkspro\\.com.*#",
+                "#^[a-z0-9\\.\\-]+\\.fxo\\.co.*#"
             ]
         },
         {
             "id": 494,
             "name": "Cablato Limited",
             "AdServers": [
-                "#^[a-z0-9\\-]+\\.cabla\\.to.*#"
+                "#^[a-z0-9\\.\\-]+\\.cabla\\.to.*#"
             ]
         },
         {
@@ -2889,25 +3001,25 @@
             "id": 507,
             "name": "AdsWizz Inc.",
             "AdServers": [
-                "#^[a-z0-9\\-]+\\.deliveryengine\\.adswizz\\.com.*#",
-                "#^[a-z0-9\\-]+\\.adswizz\\.com.*#"
+                "#^[a-z0-9\\.\\-]+\\.deliveryengine\\.adswizz\\.com.*#",
+                "#^[a-z0-9\\.\\-]+\\.adswizz\\.com.*#"
             ]
         },
         {
             "id": 517,
             "name": "SunMedia ",
             "AdServers": [
-                "#^[a-z0-9\\-]+\\.sunmedia\\.tv.*#",
-                "#^[a-z0-9\\-]+\\.sunmedia\\.es.*#"
+                "#^[a-z0-9\\.\\-]+\\.sunmedia\\.tv.*#",
+                "#^[a-z0-9\\.\\-]+\\.sunmedia\\.es.*#"
             ]
         },
         {
             "id": 518,
             "name": "Accelerize Inc.",
             "AdServers": [
-                "#^[a-z0-9\\-]+\\.jrnytag\\.com.*#",
-                "#^[a-z0-9\\-]+\\.plgpm\\.co\\.uk.*#",
-                "#^[a-z0-9\\-]+\\.doys\\.systems.*#"
+                "#^[a-z0-9\\.\\-]+\\.jrnytag\\.com.*#",
+                "#^[a-z0-9\\.\\-]+\\.plgpm\\.co\\.uk.*#",
+                "#^[a-z0-9\\.\\-]+\\.doys\\.systems.*#"
             ]
         },
         {
@@ -2929,8 +3041,8 @@
             "id": 479,
             "name": "INFINIA MOBILE S.L.",
             "AdServers": [
-                "#^[a-z0-9\\-]+\\.infiniamobile\\.com.*#",
-                "#^[a-z0-9\\-]+\\.infiniadmp\\.com.*#"
+                "#^[a-z0-9\\.\\-]+\\.infiniamobile\\.com.*#",
+                "#^[a-z0-9\\.\\-]+\\.infiniadmp\\.com.*#"
             ]
         },
         {
@@ -2944,7 +3056,7 @@
             "id": 521,
             "name": "netzeffekt GmbH",
             "AdServers": [
-                "#^[a-z0-9\\-]+\\.netrk\\.net.*#"
+                "#^[a-z0-9\\.\\-]+\\.netrk\\.net.*#"
             ]
         },
         {
@@ -2966,15 +3078,15 @@
             "id": 529,
             "name": "Fidzup",
             "AdServers": [
-                "#^[a-z0-9\\-]+\\.fidzup\\.com.*#",
-                "#^[a-z0-9\\-]+\\.spotinstore\\.com.*#"
+                "#^[a-z0-9\\.\\-]+\\.fidzup\\.com.*#",
+                "#^[a-z0-9\\.\\-]+\\.spotinstore\\.com.*#"
             ]
         },
         {
             "id": 527,
             "name": "Jampp LTD",
             "AdServers": [
-                "#^[a-z0-9\\-]+\\.jampp\\.com.*#",
+                "#^[a-z0-9\\.\\-]+\\.jampp\\.com.*#",
                 "#^42trck\\.com.*#"
             ]
         },
@@ -2982,14 +3094,14 @@
             "id": 506,
             "name": "salesforce.com, inc.",
             "AdServers": [
-                "#^[a-z0-9\\-]+\\.krxd\\.net.*#"
+                "#^[a-z0-9\\.\\-]+\\.krxd\\.net.*#"
             ]
         },
         {
             "id": 535,
             "name": "INNITY",
             "AdServers": [
-                "#^[a-z0-9\\-]+\\.innity\\.com.*#"
+                "#^[a-z0-9\\.\\-]+\\.innity\\.com.*#"
             ]
         },
         {
@@ -3004,17 +3116,17 @@
             "id": 523,
             "name": "X-Mode Social, Inc.",
             "AdServers": [
-                "#^[a-z0-9\\-]+\\.xmode\\.io.*#",
-                "#^[a-z0-9\\-]+\\.walkagainsthumanity\\.com.*#",
-                "#^[a-z0-9\\-]+\\.xmodesocial\\.com.*#",
-                "#^[a-z0-9\\-]+\\.drunkmode\\.org.*#"
+                "#^[a-z0-9\\.\\-]+\\.xmode\\.io.*#",
+                "#^[a-z0-9\\.\\-]+\\.walkagainsthumanity\\.com.*#",
+                "#^[a-z0-9\\.\\-]+\\.xmodesocial\\.com.*#",
+                "#^[a-z0-9\\.\\-]+\\.drunkmode\\.org.*#"
             ]
         },
         {
             "id": 531,
             "name": "Smartclip Hispania SL",
             "AdServers": [
-                "#^[a-z0-9\\-]+\\.smartclip-services\\.com.*#"
+                "#^[a-z0-9\\.\\-]+\\.smartclip-services\\.com.*#"
             ]
         },
         {
@@ -3029,8 +3141,8 @@
             "id": 525,
             "name": "PUB OCEAN LIMITED",
             "AdServers": [
-                "#^[a-z0-9\\-]+\\.pubocean\\.com.*#",
-                "#^[a-z0-9\\-]+\\.liveyield\\.com.*#"
+                "#^[a-z0-9\\.\\-]+\\.pubocean\\.com.*#",
+                "#^[a-z0-9\\.\\-]+\\.liveyield\\.com.*#"
             ]
         },
         {
@@ -3051,43 +3163,43 @@
             "id": 547,
             "name": "Video Reach",
             "AdServers": [
-                "#^[a-z0-9\\-]+\\.videoreach\\.de.*#"
+                "#^[a-z0-9\\.\\-]+\\.videoreach\\.de.*#"
             ]
         },
         {
             "id": 541,
             "name": "DeepIntent, Inc.",
             "AdServers": [
-                "#^[a-z0-9\\-]+\\.deepintent\\.com.*#"
+                "#^[a-z0-9\\.\\-]+\\.deepintent\\.com.*#"
             ]
         },
         {
             "id": 545,
             "name": "ReigNN Platform Ltd.",
             "AdServers": [
-                "#^[a-z0-9\\-]+\\.pixeltracking\\.co.*#",
-                "#^[a-z0-9\\-]+\\.reignn\\.com.*#"
+                "#^[a-z0-9\\.\\-]+\\.pixeltracking\\.co.*#",
+                "#^[a-z0-9\\.\\-]+\\.reignn\\.com.*#"
             ]
         },
         {
             "id": 553,
             "name": "Adhese",
             "AdServers": [
-                "#^[a-z0-9\\-]+\\.adhese\\.com.*#"
+                "#^[a-z0-9\\.\\-]+\\.adhese\\.com.*#"
             ]
         },
         {
             "id": 556,
             "name": "adhood.com",
             "AdServers": [
-                "#^[a-z0-9\\-]+\\.theadx\\.com.*#"
+                "#^[a-z0-9\\.\\-]+\\.theadx\\.com.*#"
             ]
         },
         {
             "id": 560,
             "name": "Leiki Ltd.",
             "AdServers": [
-                "#^[a-z0-9\\-]+\\.leiki\\.com.*#"
+                "#^[a-z0-9\\.\\-]+\\.leiki\\.com.*#"
             ]
         },
         {
@@ -3252,21 +3364,21 @@
             "id": 559,
             "name": "Otto (GmbH &amp; Co KG)",
             "AdServers": [
-                "#^[a-z0-9\\-]+\\.otto\\.de.*#"
+                "#^[a-z0-9\\.\\-]+\\.otto\\.de.*#"
             ]
         },
         {
             "id": 548,
             "name": "LBC France",
             "AdServers": [
-                "#^[a-z0-9\\-]+\\.leboncoin\\.fr.*#"
+                "#^[a-z0-9\\.\\-]+\\.leboncoin\\.fr.*#"
             ]
         },
         {
             "id": 569,
             "name": "Kairos Fire",
             "AdServers": [
-                "#^[a-z0-9\\-]+\\.kairosfire\\.com.*#"
+                "#^[a-z0-9\\.\\-]+\\.kairosfire\\.com.*#"
             ]
         },
         {
@@ -3303,12 +3415,12 @@
             "id": 574,
             "name": "Realeyes O\u00dc",
             "AdServers": [
-                "#^[a-z0-9\\-]+\\.realeyesit\\.com.*#",
-                "#^[a-z0-9\\-]+\\.realeyesusa\\.com.*#",
-                "#^[a-z0-9\\-]+\\.onlineeyetracking\\.com.*#",
-                "#^[a-z0-9\\-]+\\.realeyes\\.me.*#",
-                "#^[a-z0-9\\-]+\\.realeyes\\.co.*#",
-                "#^[a-z0-9\\-]+\\.realeyes\\.it.*#",
+                "#^[a-z0-9\\.\\-]+\\.realeyesit\\.com.*#",
+                "#^[a-z0-9\\.\\-]+\\.realeyesusa\\.com.*#",
+                "#^[a-z0-9\\.\\-]+\\.onlineeyetracking\\.com.*#",
+                "#^[a-z0-9\\.\\-]+\\.realeyes\\.me.*#",
+                "#^[a-z0-9\\.\\-]+\\.realeyes\\.co.*#",
+                "#^[a-z0-9\\.\\-]+\\.realeyes\\.it.*#",
                 "#^facialcoding\\.ipsos\\.com.*#"
             ]
         },
@@ -3323,26 +3435,26 @@
             "id": 576,
             "name": "StartApp Inc.",
             "AdServers": [
-                "#^[a-z0-9\\-]+\\.startapp\\.com.*#",
-                "#^[a-z0-9\\-]+\\.startappservice\\.com.*#",
-                "#^[a-z0-9\\-]+\\.startappnetwork\\.com.*#",
-                "#^[a-z0-9\\-]+\\.startppdata\\.com.*#",
-                "#^[a-z0-9\\-]+\\.startappexchange\\.com.*#"
+                "#^[a-z0-9\\.\\-]+\\.startapp\\.com.*#",
+                "#^[a-z0-9\\.\\-]+\\.startappservice\\.com.*#",
+                "#^[a-z0-9\\.\\-]+\\.startappnetwork\\.com.*#",
+                "#^[a-z0-9\\.\\-]+\\.startppdata\\.com.*#",
+                "#^[a-z0-9\\.\\-]+\\.startappexchange\\.com.*#"
             ]
         },
         {
             "id": 592,
             "name": "Colpirio.com",
             "AdServers": [
-                "#^[a-z0-9\\-]+\\.colpirio\\.com.*#"
+                "#^[a-z0-9\\.\\-]+\\.colpirio\\.com.*#"
             ]
         },
         {
             "id": 549,
             "name": "Bandsintown Amplified LLC",
             "AdServers": [
-                "#^[a-z0-9\\-]+\\.clickfuse\\.com.*#",
-                "#^[a-z0-9\\-]+\\.tonefuse\\.com.*#"
+                "#^[a-z0-9\\.\\-]+\\.clickfuse\\.com.*#",
+                "#^[a-z0-9\\.\\-]+\\.tonefuse\\.com.*#"
             ]
         },
         {
@@ -3371,19 +3483,19 @@
             "id": 601,
             "name": "WebAds B.V",
             "AdServers": [
-                "#^[a-z0-9\\-]+\\.webads\\.nl.*#",
-                "#^[a-z0-9\\-]+\\.webads\\.eu.*#",
-                "#^[a-z0-9\\-]+\\.webads\\.it.*#",
-                "#^[a-z0-9\\-]+\\.webads\\.es.*#"
+                "#^[a-z0-9\\.\\-]+\\.webads\\.nl.*#",
+                "#^[a-z0-9\\.\\-]+\\.webads\\.eu.*#",
+                "#^[a-z0-9\\.\\-]+\\.webads\\.it.*#",
+                "#^[a-z0-9\\.\\-]+\\.webads\\.es.*#"
             ]
         },
         {
             "id": 599,
             "name": "Maximus Live LLC",
             "AdServers": [
-                "#^[a-z0-9\\-]+\\.rpptrk\\.com.*#",
-                "#^[a-z0-9\\-]+\\.maximus\\.live.*#",
-                "#^[a-z0-9\\-]+\\.maximusx\\.com.*#"
+                "#^[a-z0-9\\.\\-]+\\.rpptrk\\.com.*#",
+                "#^[a-z0-9\\.\\-]+\\.maximus\\.live.*#",
+                "#^[a-z0-9\\.\\-]+\\.maximusx\\.com.*#"
             ]
         },
         {
@@ -3397,7 +3509,7 @@
             "id": 606,
             "name": "Impactify ",
             "AdServers": [
-                "#^[a-z0-9\\-]+\\.impactify\\.io.*#"
+                "#^[a-z0-9\\.\\-]+\\.impactify\\.io.*#"
             ]
         },
         {
@@ -3475,15 +3587,15 @@
             "id": 602,
             "name": "Online Solution Int Limited",
             "AdServers": [
-                "#^[a-z0-9\\-]+\\.adsafety\\.net.*#",
-                "#^[a-z0-9\\-]+\\.adsafety\\.eu.*#",
-                "#^[a-z0-9\\-]+\\.online-solution\\.biz.*#",
-                "#^[a-z0-9\\-]+\\.online-solution\\.org.*#",
-                "#^[a-z0-9\\-]+\\.sspx\\.tech.*#",
-                "#^[a-z0-9\\-]+\\.dspx\\.tv.*#",
-                "#^[a-z0-9\\-]+\\.recognified\\.net.*#",
-                "#^[a-z0-9\\-]+\\.cdn-solution\\.net.*#",
-                "#^[a-z0-9\\-]+\\.switchin\\.tv.*#"
+                "#^[a-z0-9\\.\\-]+\\.adsafety\\.net.*#",
+                "#^[a-z0-9\\.\\-]+\\.adsafety\\.eu.*#",
+                "#^[a-z0-9\\.\\-]+\\.online-solution\\.biz.*#",
+                "#^[a-z0-9\\.\\-]+\\.online-solution\\.org.*#",
+                "#^[a-z0-9\\.\\-]+\\.sspx\\.tech.*#",
+                "#^[a-z0-9\\.\\-]+\\.dspx\\.tv.*#",
+                "#^[a-z0-9\\.\\-]+\\.recognified\\.net.*#",
+                "#^[a-z0-9\\.\\-]+\\.cdn-solution\\.net.*#",
+                "#^[a-z0-9\\.\\-]+\\.switchin\\.tv.*#"
             ]
         },
         {
@@ -3500,31 +3612,31 @@
             "name": "Market Resource Partners LLC",
             "AdServers": [
                 "#^tracker\\.mrpfd\\.com.*#",
-                "#^[a-z0-9\\-]+\\.mrpdata\\.net.*#",
-                "#^[a-z0-9\\-]+\\.techhubly\\.com.*#"
+                "#^[a-z0-9\\.\\-]+\\.mrpdata\\.net.*#",
+                "#^[a-z0-9\\.\\-]+\\.techhubly\\.com.*#"
             ]
         },
         {
             "id": 615,
             "name": "Adsolutions BV",
             "AdServers": [
-                "#^[a-z0-9\\-]+\\.adsolutions\\.com.*#",
-                "#^[a-z0-9\\-]+\\.biddercore\\.io.*#"
+                "#^[a-z0-9\\.\\-]+\\.adsolutions\\.com.*#",
+                "#^[a-z0-9\\.\\-]+\\.biddercore\\.io.*#"
             ]
         },
         {
             "id": 609,
             "name": "Predicio",
             "AdServers": [
-                "#^[a-z0-9\\-]+\\.trkr\\.predic\\.io.*#"
+                "#^[a-z0-9\\.\\-]+\\.trkr\\.predic\\.io.*#"
             ]
         },
         {
             "id": 617,
             "name": "Onfocus (Adagio)",
             "AdServers": [
-                "#^[a-z0-9\\-]+\\.4dex\\.io.*#",
-                "#^[a-z0-9\\-]+\\.adagio\\.io.*#",
+                "#^[a-z0-9\\.\\-]+\\.4dex\\.io.*#",
+                "#^[a-z0-9\\.\\-]+\\.adagio\\.io.*#",
                 "#^adagio\\.io.*#"
             ]
         },
@@ -3532,91 +3644,91 @@
             "id": 620,
             "name": "Blue",
             "AdServers": [
-                "#^[a-z0-9\\-]+\\.getblue\\.io.*#"
+                "#^[a-z0-9\\.\\-]+\\.getblue\\.io.*#"
             ]
         },
         {
             "id": 610,
             "name": "Azerion Holding B.V.",
             "AdServers": [
-                "#^[a-z0-9\\-]+\\.azerion\\.com.*#",
-                "#^[a-z0-9\\-]+\\.keygames\\.com.*#",
-                "#^[a-z0-9\\-]+\\.jouerjouer\\.com.*#",
-                "#^[a-z0-9\\-]+\\.spiels\\.at.*#",
-                "#^[a-z0-9\\-]+\\.spiels\\.ch.*#",
-                "#^[a-z0-9\\-]+\\.hryhry\\.net.*#",
-                "#^[a-z0-9\\-]+\\.pelaaleikkia\\.com.*#",
-                "#^[a-z0-9\\-]+\\.waznygry\\.pl.*#",
-                "#^[a-z0-9\\-]+\\.nyckelspel\\.se.*#",
-                "#^[a-z0-9\\-]+\\.minigioco\\.it.*#",
-                "#^[a-z0-9\\-]+\\.1001igry\\.ru.*#",
-                "#^[a-z0-9\\-]+\\.clavejuegos\\.com.*#",
-                "#^[a-z0-9\\-]+\\.kilitoyun\\.com.*#",
-                "#^[a-z0-9\\-]+\\.jogojogar\\.com.*#",
-                "#^[a-z0-9\\-]+\\.starbie\\.co\\.uk.*#",
-                "#^[a-z0-9\\-]+\\.oyungemisi\\.com.*#",
-                "#^[a-z0-9\\-]+\\.spele\\.be.*#",
-                "#^[a-z0-9\\-]+\\.spielspiele\\.de.*#",
-                "#^[a-z0-9\\-]+\\.spele\\.nl.*#",
-                "#^[a-z0-9\\-]+\\.games\\.co\\.za.*#",
-                "#^[a-z0-9\\-]+\\.spelletjesoverzicht\\.nl.*#",
-                "#^[a-z0-9\\-]+\\.bgames\\.com.*#",
-                "#^[a-z0-9\\-]+\\.funnygames\\.nl.*#",
-                "#^[a-z0-9\\-]+\\.funny-games\\.co\\.uk.*#",
-                "#^[a-z0-9\\-]+\\.funnygames\\.at.*#",
-                "#^[a-z0-9\\-]+\\.funnygames\\.be.*#",
-                "#^[a-z0-9\\-]+\\.funnygames\\.biz.*#",
-                "#^[a-z0-9\\-]+\\.funnygames\\.ch.*#",
-                "#^[a-z0-9\\-]+\\.funnygames\\.cn.*#",
-                "#^[a-z0-9\\-]+\\.funnygames\\.co\\.id.*#",
-                "#^[a-z0-9\\-]+\\.funnygames\\.com\\.br.*#",
-                "#^[a-z0-9\\-]+\\.funnygames\\.com\\.co.*#",
-                "#^[a-z0-9\\-]+\\.funnygames\\.com\\.mx.*#",
-                "#^[a-z0-9\\-]+\\.funnygames\\.com\\.tr.*#",
-                "#^[a-z0-9\\-]+\\.funnygames\\.dk.*#",
-                "#^[a-z0-9\\-]+\\.funnygames\\.es.*#",
-                "#^[a-z0-9\\-]+\\.funnygames\\.eu.*#",
-                "#^[a-z0-9\\-]+\\.funnygames\\.fi.*#",
-                "#^[a-z0-9\\-]+\\.funnygames\\.fr.*#",
-                "#^[a-z0-9\\-]+\\.funnygames\\.gr.*#",
-                "#^[a-z0-9\\-]+\\.funnygames\\.hu.*#",
-                "#^[a-z0-9\\-]+\\.funnygames\\.ie.*#",
-                "#^[a-z0-9\\-]+\\.funnygames\\.in.*#",
-                "#^[a-z0-9\\-]+\\.funnygames\\.ir.*#",
-                "#^[a-z0-9\\-]+\\.funnygames\\.it.*#",
-                "#^[a-z0-9\\-]+\\.funnygames\\.jp.*#",
-                "#^[a-z0-9\\-]+\\.funnygames\\.kr.*#",
-                "#^[a-z0-9\\-]+\\.funnygames\\.lt.*#",
-                "#^[a-z0-9\\-]+\\.funnygames\\.no.*#",
-                "#^[a-z0-9\\-]+\\.funnygames\\.org.*#",
-                "#^[a-z0-9\\-]+\\.funnygames\\.ph.*#",
-                "#^[a-z0-9\\-]+\\.funnygames\\.pk.*#",
-                "#^[a-z0-9\\-]+\\.funnygames\\.pl.*#",
-                "#^[a-z0-9\\-]+\\.funnygames\\.pt.*#",
-                "#^[a-z0-9\\-]+\\.funnygames\\.ro.*#",
-                "#^[a-z0-9\\-]+\\.funnygames\\.ru.*#",
-                "#^[a-z0-9\\-]+\\.funnygames\\.se.*#",
-                "#^[a-z0-9\\-]+\\.funnygames\\.us.*#",
-                "#^[a-z0-9\\-]+\\.stratego\\.com.*#",
-                "#^[a-z0-9\\-]+\\.governorofpoker\\.com.*#",
-                "#^[a-z0-9\\-]+\\.governorofpoker4\\.net.*#",
-                "#^[a-z0-9\\-]+\\.vooxe\\.video.*#",
-                "#^[a-z0-9\\-]+\\.gamedistribution\\.com.*#",
-                "#^[a-z0-9\\-]+\\.vooxe\\.com.*#",
-                "#^[a-z0-9\\-]+\\.hellokids\\.com.*#",
-                "#^[a-z0-9\\-]+\\.plinga\\.com.*#",
-                "#^[a-z0-9\\-]+\\.tubia\\.com.*#",
-                "#^[a-z0-9\\-]+\\.hyvesgames\\.nl.*#",
-                "#^[a-z0-9\\-]+\\.zigiz\\.com.*#",
-                "#^[a-z0-9\\-]+\\.gembly\\.com.*#"
+                "#^[a-z0-9\\.\\-]+\\.azerion\\.com.*#",
+                "#^[a-z0-9\\.\\-]+\\.keygames\\.com.*#",
+                "#^[a-z0-9\\.\\-]+\\.jouerjouer\\.com.*#",
+                "#^[a-z0-9\\.\\-]+\\.spiels\\.at.*#",
+                "#^[a-z0-9\\.\\-]+\\.spiels\\.ch.*#",
+                "#^[a-z0-9\\.\\-]+\\.hryhry\\.net.*#",
+                "#^[a-z0-9\\.\\-]+\\.pelaaleikkia\\.com.*#",
+                "#^[a-z0-9\\.\\-]+\\.waznygry\\.pl.*#",
+                "#^[a-z0-9\\.\\-]+\\.nyckelspel\\.se.*#",
+                "#^[a-z0-9\\.\\-]+\\.minigioco\\.it.*#",
+                "#^[a-z0-9\\.\\-]+\\.1001igry\\.ru.*#",
+                "#^[a-z0-9\\.\\-]+\\.clavejuegos\\.com.*#",
+                "#^[a-z0-9\\.\\-]+\\.kilitoyun\\.com.*#",
+                "#^[a-z0-9\\.\\-]+\\.jogojogar\\.com.*#",
+                "#^[a-z0-9\\.\\-]+\\.starbie\\.co\\.uk.*#",
+                "#^[a-z0-9\\.\\-]+\\.oyungemisi\\.com.*#",
+                "#^[a-z0-9\\.\\-]+\\.spele\\.be.*#",
+                "#^[a-z0-9\\.\\-]+\\.spielspiele\\.de.*#",
+                "#^[a-z0-9\\.\\-]+\\.spele\\.nl.*#",
+                "#^[a-z0-9\\.\\-]+\\.games\\.co\\.za.*#",
+                "#^[a-z0-9\\.\\-]+\\.spelletjesoverzicht\\.nl.*#",
+                "#^[a-z0-9\\.\\-]+\\.bgames\\.com.*#",
+                "#^[a-z0-9\\.\\-]+\\.funnygames\\.nl.*#",
+                "#^[a-z0-9\\.\\-]+\\.funny-games\\.co\\.uk.*#",
+                "#^[a-z0-9\\.\\-]+\\.funnygames\\.at.*#",
+                "#^[a-z0-9\\.\\-]+\\.funnygames\\.be.*#",
+                "#^[a-z0-9\\.\\-]+\\.funnygames\\.biz.*#",
+                "#^[a-z0-9\\.\\-]+\\.funnygames\\.ch.*#",
+                "#^[a-z0-9\\.\\-]+\\.funnygames\\.cn.*#",
+                "#^[a-z0-9\\.\\-]+\\.funnygames\\.co\\.id.*#",
+                "#^[a-z0-9\\.\\-]+\\.funnygames\\.com\\.br.*#",
+                "#^[a-z0-9\\.\\-]+\\.funnygames\\.com\\.co.*#",
+                "#^[a-z0-9\\.\\-]+\\.funnygames\\.com\\.mx.*#",
+                "#^[a-z0-9\\.\\-]+\\.funnygames\\.com\\.tr.*#",
+                "#^[a-z0-9\\.\\-]+\\.funnygames\\.dk.*#",
+                "#^[a-z0-9\\.\\-]+\\.funnygames\\.es.*#",
+                "#^[a-z0-9\\.\\-]+\\.funnygames\\.eu.*#",
+                "#^[a-z0-9\\.\\-]+\\.funnygames\\.fi.*#",
+                "#^[a-z0-9\\.\\-]+\\.funnygames\\.fr.*#",
+                "#^[a-z0-9\\.\\-]+\\.funnygames\\.gr.*#",
+                "#^[a-z0-9\\.\\-]+\\.funnygames\\.hu.*#",
+                "#^[a-z0-9\\.\\-]+\\.funnygames\\.ie.*#",
+                "#^[a-z0-9\\.\\-]+\\.funnygames\\.in.*#",
+                "#^[a-z0-9\\.\\-]+\\.funnygames\\.ir.*#",
+                "#^[a-z0-9\\.\\-]+\\.funnygames\\.it.*#",
+                "#^[a-z0-9\\.\\-]+\\.funnygames\\.jp.*#",
+                "#^[a-z0-9\\.\\-]+\\.funnygames\\.kr.*#",
+                "#^[a-z0-9\\.\\-]+\\.funnygames\\.lt.*#",
+                "#^[a-z0-9\\.\\-]+\\.funnygames\\.no.*#",
+                "#^[a-z0-9\\.\\-]+\\.funnygames\\.org.*#",
+                "#^[a-z0-9\\.\\-]+\\.funnygames\\.ph.*#",
+                "#^[a-z0-9\\.\\-]+\\.funnygames\\.pk.*#",
+                "#^[a-z0-9\\.\\-]+\\.funnygames\\.pl.*#",
+                "#^[a-z0-9\\.\\-]+\\.funnygames\\.pt.*#",
+                "#^[a-z0-9\\.\\-]+\\.funnygames\\.ro.*#",
+                "#^[a-z0-9\\.\\-]+\\.funnygames\\.ru.*#",
+                "#^[a-z0-9\\.\\-]+\\.funnygames\\.se.*#",
+                "#^[a-z0-9\\.\\-]+\\.funnygames\\.us.*#",
+                "#^[a-z0-9\\.\\-]+\\.stratego\\.com.*#",
+                "#^[a-z0-9\\.\\-]+\\.governorofpoker\\.com.*#",
+                "#^[a-z0-9\\.\\-]+\\.governorofpoker4\\.net.*#",
+                "#^[a-z0-9\\.\\-]+\\.vooxe\\.video.*#",
+                "#^[a-z0-9\\.\\-]+\\.gamedistribution\\.com.*#",
+                "#^[a-z0-9\\.\\-]+\\.vooxe\\.com.*#",
+                "#^[a-z0-9\\.\\-]+\\.hellokids\\.com.*#",
+                "#^[a-z0-9\\.\\-]+\\.plinga\\.com.*#",
+                "#^[a-z0-9\\.\\-]+\\.tubia\\.com.*#",
+                "#^[a-z0-9\\.\\-]+\\.hyvesgames\\.nl.*#",
+                "#^[a-z0-9\\.\\-]+\\.zigiz\\.com.*#",
+                "#^[a-z0-9\\.\\-]+\\.gembly\\.com.*#"
             ]
         },
         {
             "id": 621,
             "name": "Seznam.cz, a.s.",
             "AdServers": [
-                "#^[a-z0-9\\-]+\\.imedia\\.cz.*#",
-                "#^[a-z0-9\\-]+\\.seznam\\.cz.*#"
+                "#^[a-z0-9\\.\\-]+\\.imedia\\.cz.*#",
+                "#^[a-z0-9\\.\\-]+\\.seznam\\.cz.*#"
             ]
         },
         {
@@ -3631,21 +3743,21 @@
             "id": 95,
             "name": "Lotame Solutions, Inc.",
             "AdServers": [
-                "#^[a-z0-9\\-]+\\.crwdcntrl\\.net.*#"
+                "#^[a-z0-9\\.\\-]+\\.crwdcntrl\\.net.*#"
             ]
         },
         {
             "id": 618,
             "name": "BEINTOO SPA",
             "AdServers": [
-                "#^[a-z0-9\\-]+\\.beintoo\\.net.*#"
+                "#^[a-z0-9\\.\\-]+\\.beintoo\\.net.*#"
             ]
         },
         {
             "id": 619,
             "name": "Capitaldata",
             "AdServers": [
-                "#^bid-[a-z0-9\\-]+\\.kdata\\.fr.*#",
+                "#^bid-[a-z0-9\\.\\-]+\\.kdata\\.fr.*#",
                 "#^cdn\\.kdata\\.fr.*#",
                 "#^tracking\\.kdata\\.fr.*#"
             ]
@@ -3654,9 +3766,9 @@
             "id": 630,
             "name": "Contact Impact GmbH",
             "AdServers": [
-                "#^[a-z0-9\\-]+\\.df-srv\\.de.*#",
-                "#^[a-z0-9\\-]+\\.c-i\\.as.*#",
-                "#^[a-z0-9\\-]+\\.adtech\\.as.*#"
+                "#^[a-z0-9\\.\\-]+\\.df-srv\\.de.*#",
+                "#^[a-z0-9\\.\\-]+\\.c-i\\.as.*#",
+                "#^[a-z0-9\\.\\-]+\\.adtech\\.as.*#"
             ]
         },
         {
@@ -3668,9 +3780,9 @@
         },
         {
             "id": 613,
-            "name": "Artworx AS \/ Adserve.zone",
+            "name": "Adserve.zone \/ Artworx AS",
             "AdServers": [
-                "#^[a-z0-9\\-]+\\.adserve\\.zone.*#"
+                "#^[a-z0-9\\.\\-]+\\.adserve\\.zone.*#"
             ]
         },
         {
@@ -3700,32 +3812,93 @@
             "name": "Axel Springer Teaser Ad GmbH",
             "AdServers": [
                 "#^d\\.adup-tech\\.com.*#",
-                "#^[a-z0-9\\-]+\\.adtech\\.as.*#",
+                "#^[a-z0-9\\.\\-]+\\.adtech\\.as.*#",
                 "#^t\\.d\\.adup-tech\\.com.*#",
                 "#^s\\.d\\.adup-tech\\.com.*#",
-                "#^[a-z0-9\\-]+\\.adup-tech\\.com.*#"
+                "#^[a-z0-9\\.\\-]+\\.adup-tech\\.com.*#"
             ]
         },
         {
             "id": 654,
             "name": "GRAPHINIUM",
             "AdServers": [
-                "#^[a-z0-9\\-]+\\.crm4d\\.com.*#",
-                "#^[a-z0-9\\-]+\\.graphinium\\.com.*#"
+                "#^[a-z0-9\\.\\-]+\\.crm4d\\.com.*#",
+                "#^[a-z0-9\\.\\-]+\\.graphinium\\.com.*#"
             ]
         },
         {
             "id": 655,
             "name": "Sportradar AG",
             "AdServers": [
-                "#^[a-z0-9\\-]+\\.sportradarserving\\.com.*#"
+                "#^[a-z0-9\\.\\-]+\\.sportradarserving\\.com.*#"
             ]
         },
         {
             "id": 650,
             "name": "Telefonica Investigaci\u00f3n y Desarrollo S.A.U",
             "AdServers": [
-                "#^[a-z0-9\\-]+\\.tid\\.es.*#"
+                "#^[a-z0-9\\.\\-]+\\.tid\\.es.*#"
+            ]
+        },
+        {
+            "id": 663,
+            "name": "Mobsuccess",
+            "AdServers": [
+                "#^[a-z0-9\\.\\-]+\\.mobsuccess\\.com.*#"
+            ]
+        },
+        {
+            "id": 658,
+            "name": "BLIINK SAS",
+            "AdServers": [
+                "#^[a-z0-9\\.\\-]+\\.bliink\\.io.*#",
+                "#^[a-z0-9\\.\\-]+\\.api\\.bliink\\.io.*#",
+                "#^bliink\\.io.*#",
+                "#^api\\.bliink\\.io.*#"
+            ]
+        },
+        {
+            "id": 668,
+            "name": "WhatRocks Inc. ",
+            "AdServers": [
+                "#^beta\\.webapp\\.whatrocks\\.co.*#"
+            ]
+        },
+        {
+            "id": 670,
+            "name": "Timehop, Inc.",
+            "AdServers": [
+                "#^69phs7h4d3nhbcbrdy9l\\.adsbynimbus\\.com.*#",
+                "#^dashboard-dmitry\\.adsbynimbus\\.com.*#",
+                "#^dashboard\\.adsbynimbus\\.com.*#",
+                "#^dev-sdk\\.adsbynimbus\\.com.*#",
+                "#^dev-turbo\\.adsbynimbus\\.com.*#",
+                "#^dev\\.adsbynimbus\\.com.*#",
+                "#^fortunebox-jp\\.adsbynimbus\\.com.*#",
+                "#^fortunebox-us\\.adsbynimbus\\.com.*#",
+                "#^imgur\\.adsbynimbus\\.com.*#",
+                "#^jumprampgames\\.adsbynimbus\\.com.*#",
+                "#^mixerbox\\.adsbynimbus\\.com.*#",
+                "#^om-test\\.adsbynimbus\\.com.*#",
+                "#^sliide\\.adsbynimbus\\.com.*#",
+                "#^test-turbo\\.adsbynimbus\\.com.*#",
+                "#^timehop-glb\\.adsbynimbus\\.com.*#",
+                "#^timehop\\.adsbynimbus\\.com.*#",
+                "#^turbo-mixerbox\\.adsbynimbus\\.com.*#",
+                "#^turbo-wattpad\\.adsbynimbus\\.com.*#",
+                "#^turbo\\.adsbynimbus\\.com.*#",
+                "#^wattpad\\.adsbynimbus\\.com.*#",
+                "#^www\\.adsbynimbus\\.com.*#",
+                "#^abemin\\.timehop\\.com.*#",
+                "#^abepanel\\.timehop\\.com.*#"
+            ]
+        },
+        {
+            "id": 674,
+            "name": "Duration Media, LLC.",
+            "AdServers": [
+                "#^[a-z0-9\\.\\-]+\\.realvu\\.net.*#",
+                "#^[a-z0-9\\.\\-]+\\.durationmedia\\.net.*#"
             ]
         }
     ]

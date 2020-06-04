@@ -8,7 +8,9 @@ use OVKAC\Formats\DefaultFormat;
 use OVKAC\Formats\Formats;
 use OVKAC\Logger\Logger;
 use OVKAC\State\State;
+use OVKAC\Vendors\DefaultTcfVendors;
 use OVKAC\Vendors\DefaultVendors;
+use OVKAC\Vendors\TcfVendors;
 use OVKAC\Vendors\Vendors;
 
 final class DefaultChecker implements Checker
@@ -25,10 +27,13 @@ final class DefaultChecker implements Checker
 
     /** @var Vendors */
     private $vendors;
+    private $vendorUrl = 'https://vendorlist.consensu.org/vendorinfo.json';
+
+    /** @var TcfVendors */
+    private $tcfVendors;
+    private $tcfConfigUrl = ''; // TODO set location of remote tcf vendors config json (https://somewhere/tcfconfig.json)
 
     private $nodeBinary = '/usr/bin/node';
-
-    private $vendorUrl = 'https://vendorlist.consensu.org/vendorinfo.json';
 
     public function __construct(
         string $rootDir,
@@ -120,17 +125,22 @@ final class DefaultChecker implements Checker
             return;
         }
 
-        $profiling = @json_decode($results, true);
+        $profiling = @json_decode(
+            $results,
+            true
+        );
         if (
             $profiling !== false
             && is_array($profiling)
         ) {
             $woItems = $profiling;
             unset($woItems['items']);
-            $this->logger->debug(json_encode(
-                $woItems,
-                JSON_PRETTY_PRINT
-            ));
+            $this->logger->debug(
+                json_encode(
+                    $woItems,
+                    JSON_PRETTY_PRINT
+                )
+            );
 
             $this->state->data()->results()->setProfiling(
                 $this->extendProfiling(
@@ -159,15 +169,33 @@ final class DefaultChecker implements Checker
     }
 
     /** @throws \Exception */
+    private function tcfVendors(): void
+    {
+        $this->tcfVendors = (new DefaultTcfVendors(
+            $this->logger,
+            $this->state->data()->parameters()->tcfVendors(),
+            sprintf(
+                '%s/var/cache',
+                $this->rootDir
+            ),
+            'tcfconfig.json',
+            $this->tcfConfigUrl
+        ))->load();
+    }
+
+    /** @throws \Exception */
     private function vendors(): void
     {
         $this->vendors = (new DefaultVendors(
             $this->logger,
+            'default',
             sprintf(
                 '%s/var/cache/vendorinfo.json',
                 $this->rootDir
             ),
-            $this->vendorUrl
+            $this->vendorUrl,
+            86400,
+            true
         ))->load();
     }
 
@@ -186,16 +214,16 @@ final class DefaultChecker implements Checker
         $results->setFormat(
             $parameters->format() === '0'
                 ? new DefaultFormat(
-                    '0',
-                    'Benutzer',
-                    $parameters->customInit(),
-                    $parameters->customSub(),
-                    $parameters->customWidth(),
-                    $parameters->customHeight()
-                )
+                '0',
+                'Benutzer',
+                $parameters->customInit(),
+                $parameters->customSub(),
+                $parameters->customWidth(),
+                $parameters->customHeight()
+            )
                 : $this->formats->get(
-                    $parameters->format()
-                )
+                $parameters->format()
+            )
         );
 
         $results->setArchiveName(
@@ -203,6 +231,7 @@ final class DefaultChecker implements Checker
         );
 
         $this->vendors();
+        $this->tcfVendors();
 
         $this->subject();
 
@@ -243,26 +272,42 @@ final class DefaultChecker implements Checker
     {
         array_shift($profiling['items']);
 
-        foreach ($profiling['items'] as $k => $item) {
+        $tcfVendors = [
+            'lists' => $this->tcfVendors->names(),
+            'vendors' => []
+        ];
 
-            // add vendor
-            $profiling['items'][$k]['vendor'] = $this->vendors->find(
+        foreach ($profiling['items'] as $k => $item) {
+            $v = $this->vendors->find(
                 $item['url']
             );
+            $profiling['items'][$k]['vendor'] = $v;
+            if ($v !== null) {
+                $id = (int)$v['id'];
+                $name = (string)$v['name'];
+                if (!isset($tcfVendors['vendors'][$id])) {
+                    $tcfVendors['vendors'][$id] = [
+                        'name' => $name,
+                        'matches' => $this->tcfVendors->find(
+                            $id
+                        )
+                    ];
+                }
+            }
         }
+
+        $profiling['tcfVendors'] = $tcfVendors;
 
         return $profiling;
     }
 
     private function host(): string
     {
-        $host = sprintf(
+        return sprintf(
             '%s://%s',
             $_SERVER['REQUEST_SCHEME'],
             $_SERVER['HTTP_HOST']
         );
-
-        return $host;
     }
 
 }
