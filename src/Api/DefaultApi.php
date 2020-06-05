@@ -285,33 +285,47 @@ final class DefaultApi implements Api
     private function setTcfVendors(): void
     {
         $url = $this->request->posted('tcfVendors', null);
-        if ($url !== null && strlen((string)$url) > 0) {
-            if (strlen((string)$url) > 1024) {
-                $this->badRequest('Ungültiger Wert');
-            }
-            if (!$this->warnUrl((string)$url)) {
-                $headers = get_headers((string)$url);
-                if (!is_array($headers)) {
-                    $this->state->status()->setWarning(
-                        sprintf('URL "%s" nicht erreichbar!', (string)$url)
-                    );
+        if ($url !== null) {
+            $parameters = $this->state->data()->parameters();
+            if (strlen((string)$url) > 0) {
+                if (strlen((string)$url) > 1024) {
+                    $this->badRequest('Ungültiger Wert');
                 }
-                else {
-                    $json = false;
-                    foreach ($headers as $h) {
-                        if (stripos($h, 'content-type: application/json;') !== false) {
-                            $json = true;
-                        }
-                    }
-                    if (!$json) {
+                if (!$this->warnUrl((string)$url)) {
+                    $headers = get_headers((string)$url);
+                    if (!is_array($headers)) {
                         $this->state->status()->setWarning(
-                            sprintf('URL "%s" kein json?', (string)$url)
+                            sprintf(
+                                'URL "%s" nicht erreichbar!',
+                                (string)$url
+                            )
                         );
                     }
+                    else {
+                        $json = false;
+                        foreach ($headers as $h) {
+                            if (stripos(
+                                    $h,
+                                    'content-type: application/json;'
+                                ) !== false) {
+                                $json = true;
+                            }
+                        }
+                        if (!$json) {
+                            $this->state->status()->setWarning(
+                                sprintf(
+                                    'URL "%s" kein json?',
+                                    (string)$url
+                                )
+                            );
+                        }
+                    }
                 }
+                $parameters->setTcfVendors((string)$url);
             }
-            $parameters = $this->state->data()->parameters();
-            $parameters->setTcfVendors((string)$url);
+            else {
+                $parameters->setTcfVendors('');
+            }
         }
     }
 }
