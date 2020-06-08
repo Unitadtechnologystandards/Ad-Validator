@@ -13,7 +13,30 @@
     <div class="grid-x grid-padding-x">
         <div class="large-12 cell">
 
-            <h3>OVK AdValidator <span class="spinner" style="display:none"></span></h3>
+            <div class="titleBox">
+                <h3>
+                    <img src="ovk.png" style="width:50px;height:50px;">
+                    OVK AdValidator <span class="spinner"
+                                          style="display:none"></span>
+                </h3>
+                <div id="infoLinks">
+                    Weitere Informationen finden sie unter folgenden Links:
+                    <ul>
+                        <li>
+                            <a href="http://www.werbeformen.de/ovk/ovk-de/werbeformen/spezifikationen/initialsubload.html"
+                               target="_blank">Initial Subload </a></li>
+                        <li>
+                            <a href="http://www.werbeformen.de/ovk/ovk-de/werbeformen/spezifikationen/initialsubload/advalidator.html"
+                               target="_blank">Anleitung zur Benutzung des
+                                Advalidator Tools</a></li>
+                        <li>
+                            <a href="https://github.com/Unitadtechnologystandards/Ad-Validator"
+                               target="_blank">Advalidator auf Github</a></li>
+                        <li><a href="InitialSubload2020.zip">Download
+                            Test-Werbemittel</a></li>
+                    </ul>
+                </div>
+            </div>
 
             <div class="callout" id="settings">
 
@@ -290,7 +313,7 @@
             </div>
 
             <p>
-                Version 1.0.0
+                Version 1.1.0
             </p>
 
         </div>
@@ -307,6 +330,7 @@
     if (window.ovkadcheckPdfData) {
         $('#settings').hide();
         $('#results').show();
+        $('#infoLinks').hide();
         App.results(window.ovkadcheckPdfData, true);
     }
     else {
