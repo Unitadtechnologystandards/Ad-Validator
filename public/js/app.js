@@ -646,7 +646,7 @@ var App = {
 
         var n = 1;
         $.each(profiling.items, function (k, item) {
-            labels.push('#' + n);
+            labels.push('#' + item.nr);
 
             let queue = item.queueTimestamp;
             let req = item.requestTime;
