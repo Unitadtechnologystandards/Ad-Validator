@@ -27,7 +27,7 @@ final class DefaultChecker implements Checker
 
     /** @var Vendors */
     private $vendors;
-    private $vendorUrl = 'https://raw.githubusercontent.com/Unitadtechnologystandards/ovk_vendorinfo/master/ovk_vendorinfo.json';
+    private $vendorUrl = 'https://cdn.stroeerdigitalgroup.de/metatag/ovk/vendorinfo.json';
 
     /** @var TcfVendors */
     private $tcfVendors;
@@ -277,6 +277,8 @@ final class DefaultChecker implements Checker
             'vendors' => []
         ];
 
+        $gdprMacro = false;
+
         foreach ($profiling['items'] as $k => $item) {
             $v = $this->vendors->find(
                 $item['url']
@@ -294,9 +296,15 @@ final class DefaultChecker implements Checker
                     ];
                 }
             }
+
+            if ($this->gdprMacro($item['url'])) {
+                $gdprMacro = true;
+            }
         }
 
         $profiling['tcfVendors'] = $tcfVendors;
+
+        $profiling['gdprMacro'] = $gdprMacro;
 
         return $profiling;
     }
@@ -308,6 +316,11 @@ final class DefaultChecker implements Checker
             $_SERVER['REQUEST_SCHEME'],
             $_SERVER['HTTP_HOST']
         );
+    }
+
+    private function gdprMacro(string $url): bool
+    {
+        return (strpos($url, '${gdpr}') !== false && strpos($url, '${gdpr_consent}') !== false);
     }
 
 }

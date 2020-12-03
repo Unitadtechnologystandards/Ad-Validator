@@ -1,7 +1,7 @@
 [
   {
     "name": "TCF 2.0",
-    "url": "https://raw.githubusercontent.com/Unitadtechnologystandards/ovk_vendorinfo/master/ovk_vendorinfo.json",
+    "url": "https://cdn.stroeerdigitalgroup.de/metatag/ovk/vendorinfo.json",
     "ttl": 604800
   }
 ]

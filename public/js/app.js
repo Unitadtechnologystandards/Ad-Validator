@@ -386,6 +386,8 @@ var App = {
 
         App.tcfTable(results.profiling.tcfVendors);
 
+        App.gdprMacro(results.profiling.gdprMacro);
+
         App.resultsTable(results.profiling);
 
         App.initialChart(results.profiling, results.format);
@@ -408,12 +410,17 @@ var App = {
         ;
     },
 
+    gdprMacro: function(b)
+    {
+        $('#gdprMacro').html('<span class="label '+(b?'success':'alert')+'">' + (b?'ja':'nein') + '</span>');
+    },
+
     tcfTable: function (tcfData)
     {
         let $thead = $('#tcfHead');
         let $tbody = $('#tcfBody');
         $thead.empty();
-        $thead.append('<th></th>');
+        $thead.append('<th>Vendor</th>');
 
         let l = 1;
         $.each(tcfData.lists, function (k, v) {
