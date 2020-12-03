@@ -27,7 +27,7 @@ final class DefaultChecker implements Checker
 
     /** @var Vendors */
     private $vendors;
-    private $vendorUrl = 'https://vendorlist.consensu.org/vendorinfo.json';
+    private $vendorUrl = 'https://raw.githubusercontent.com/Unitadtechnologystandards/ovk_vendorinfo/master/ovk_vendorinfo.json';
 
     /** @var TcfVendors */
     private $tcfVendors;
@@ -190,7 +190,7 @@ final class DefaultChecker implements Checker
             $this->logger,
             'default',
             sprintf(
-                '%s/var/cache/vendorinfo.json',
+                '%s/var/cache/ovk_vendorinfo.json',
                 $this->rootDir
             ),
             $this->vendorUrl,

@@ -51,7 +51,7 @@ final class DefaultVendors implements Vendors
             parse_url($url, PHP_URL_HOST).parse_url($url, PHP_URL_PATH)
         );
         foreach ($this->vendors['vendors'] as $vendor) {
-            foreach ($vendor['AdServers'] as $pattern) {
+            foreach ($vendor['domains'] as $pattern) {
                 if (preg_match($pattern, $subject)) {
                     return [
                         'id' => $vendor['id'],
@@ -164,19 +164,14 @@ final class DefaultVendors implements Vendors
         $sanitized = [];
         foreach ($vendors['vendors'] as $nr => $vendor) {
             if (
-                isset($vendor['AdServers'])
-                && is_array($vendor['AdServers'])
-                && count($vendor['AdServers']) > 0
+                isset($vendor['domains'])
+                && is_array($vendor['domains'])
+                && count($vendor['domains']) > 0
             ) {
                 $temp = [];
-                foreach ($vendor['AdServers'] as $k => $match) {
-                    $x = preg_split("/\s/", $match);
-                    if (count($x) > 1) {
-                        foreach ($x as $y) {
-                            $temp[] = $y;
-                        }
-                    }
-                    else {
+                foreach ($vendor['domains'] as $k => $match) {
+                    $match = rtrim(trim($match), '/');
+                    if (strlen($match) > 0) {
                         $temp[] = $match;
                     }
                 }
@@ -197,7 +192,6 @@ final class DefaultVendors implements Vendors
                             function ($match) {
                                 $match = trim($match);
                                 $match = strtolower($match);
-                                $match = rtrim($match, ')/,');
                                 $match = str_replace('http://', '', $match);
                                 $match = str_replace('https://', '', $match);
                                 if ($match[0] === '.') {
@@ -213,7 +207,7 @@ final class DefaultVendors implements Vendors
                 );
 
                 if (count($temp) > 0) {
-                    $vendor['AdServers'] = $temp;
+                    $vendor['domains'] = $temp;
                     $sanitized[] = $vendor;
                 }
             }

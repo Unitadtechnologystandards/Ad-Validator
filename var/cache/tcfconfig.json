@@ -1,17 +1,7 @@
 [
   {
-    "name": "Unit AdTech",
-    "url": "",
-    "ttl": 86400
-  },
-  {
-    "name": "TCF 1.0",
-    "url": "https://vendorlist.consensu.org/vendorlist.json",
-    "ttl": 604800
-  },
-  {
     "name": "TCF 2.0",
-    "url": "https://vendorlist.consensu.org/v2/vendor-list.json",
+    "url": "https://raw.githubusercontent.com/Unitadtechnologystandards/ovk_vendorinfo/master/ovk_vendorinfo.json",
     "ttl": 604800
   }
 ]
