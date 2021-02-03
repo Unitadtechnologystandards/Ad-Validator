@@ -320,7 +320,8 @@ final class DefaultChecker implements Checker
 
     private function gdprMacro(string $url): bool
     {
-        return (strpos($url, '${gdpr}') !== false && strpos($url, '${gdpr_consent}') !== false);
+        $decoded = urldecode($url);
+        return stripos($decoded, '${gdpr}') !== false && preg_match('/\$\{gdpr\_consent\_[0-9]+\}/i', $decoded);
     }
 
 }
